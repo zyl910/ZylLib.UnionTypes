@@ -7,6 +7,9 @@ namespace ZylLib.UnionTypes {
 	/// <summary>
 	/// 2 byte union type. Example `short[1]`
 	/// </summary>
+	/// <remarks>
+	/// In multithreaded environments, It is recommended to Thread.MemoryBarrier before read (在多线程环境下，建议在读取之前调用Thread.MemoryBarrier).
+	/// </remarks>
 	/// 
 	/// <namespace>
 	/// <summary>
@@ -59,6 +62,27 @@ namespace ZylLib.UnionTypes {
 			// set.
 			US0 = v;
 		}
+
+		#region Object
+		/// <inheritdoc />
+		public override bool Equals(object obj) {
+			if (null == obj) return false;
+			if (!(obj is UnionShort)) return false;
+			UnionShort a = (UnionShort)obj;
+			return (S0 == a.S0);
+		}
+
+		/// <inheritdoc />
+		public override int GetHashCode() {
+			return S0.GetHashCode();
+		}
+
+		/// <inheritdoc />
+		public override string ToString() {
+			return S0.ToString();
+		}
+
+		#endregion
 
 	}
 }

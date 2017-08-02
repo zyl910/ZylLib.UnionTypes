@@ -31,11 +31,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\AssemblyVer.cs">
       <Link>AssemblyVer.cs</Link>
     </Compile>
+    <Compile Include="UnionInt.cs" />
     <Compile Include="UnionShort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
