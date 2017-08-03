@@ -36,10 +36,13 @@
     <Compile Include="..\AssemblyVer.cs">
       <Link>AssemblyVer.cs</Link>
     </Compile>
+    <Compile Include="IUnionShort.cs" />
     <Compile Include="UnionInt.cs" />
     <Compile Include="UnionShort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnionLong.cs" />
+    <Compile Include="IUnionInt.cs" />
+    <Compile Include="IUnionLong.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

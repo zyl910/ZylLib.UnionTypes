@@ -11,9 +11,9 @@ Struct (结构体) :
 
 Interfaces (接口) :
 
-* `IUnionShort`: Short union type interface (短整数联合体接口).
-* `IUnionInt`: Int union type interface (整数联合体接口).
-* `IUnionLong`: Long union type interface (长整数联合体接口).
+* `IUnionShort`: Short union type interface (短整数联合体接口). Has LoadArray/LoadArrayAt/SaveArray/SaveArrayAt/ToByteArray/ToInt16Array methods.
+* `IUnionInt`: Int union type interface (整数联合体接口). Inherited the IUnionShort interface. Has ToInt32Array/ToSingleArray methods.
+* `IUnionLong`: Long union type interface (长整数联合体接口). Inherited the IUnionInt interface. Has ToInt64Array/ToInt64Array methods.
 
 Features (特性) :
 
@@ -24,6 +24,6 @@ Features (特性) :
 
 Target frameworks (目标框架):
 
-net20: .NET Framework 2.0 . Support VS2005(VS8.0)+ .
-pcl40: Portable Class Library Profile1 (可移植库配置1), portable-net40+win8+sl4+wp7+xbox . Support VS2010(VS10.0)+ .
-netstd10: .NET Standard 1.0 . Support VS2015(VS14.0)+ .
+* `net20`: .NET Framework 2.0 . Support VS2005(VS8.0)+ .
+* `portable40`: Portable Class Library Profile1 (可移植库配置1), portable-net40+win8+sl4+wp7+xbox . Support VS2010(VS10.0)+ .
+* `netstandard1.0`: .NET Standard 1.0 . Support VS2015(VS14.0)+ .

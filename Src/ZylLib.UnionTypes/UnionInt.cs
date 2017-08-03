@@ -12,7 +12,7 @@ namespace ZylLib.UnionTypes {
 	/// </remarks>
 	[Serializable]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
-	public struct UnionInt {
+	public struct UnionInt : IUnionInt, IUnionShort {
 		/// <summary>int(Int32) 0</summary>
 		[FieldOffset(0)]
 		public int I0;
@@ -123,7 +123,39 @@ namespace ZylLib.UnionTypes {
 			F0 = v;
 		}
 
-		#region Object
+		#region Method
+		/// <summary>
+		/// To SByte array (转为 SByte 数组).
+		/// </summary>
+		/// <returns>Return SByte array (返回 SByte 数组).</returns>
+		[CLSCompliant(false)]
+		public SByte[] ToSByteArray() {
+			unchecked {
+				return new SByte[] { (SByte)B0, (SByte)B1, (SByte)B2, (SByte)B3 };
+			}
+		}
+
+		/// <summary>
+		/// To UInt16 array (转为 UInt16 数组).
+		/// </summary>
+		/// <returns>Return UInt16 array (返回 UInt16 数组).</returns>
+		[CLSCompliant(false)]
+		public UInt16[] ToUInt16Array() {
+			return new UInt16[] { US0, US1 };
+		}
+
+		/// <summary>
+		/// To UInt32 array (转为 UInt32 数组).
+		/// </summary>
+		/// <returns>Return UInt32 array (返回 UInt32 数组).</returns>
+		[CLSCompliant(false)]
+		public UInt32[] ToUInt32Array() {
+			return new UInt32[] { UI0 };
+		}
+
+		#endregion
+
+		#region Object Member
 		/// <inheritdoc />
 		public override bool Equals(object obj) {
 			if (null == obj) return false;
@@ -140,6 +172,54 @@ namespace ZylLib.UnionTypes {
 		/// <inheritdoc />
 		public override string ToString() {
 			return I0.ToString();
+		}
+
+		#endregion
+
+		#region IUnionShort Member
+
+		/// <inheritdoc />
+		public int LoadArray<T>(params T[] src) where T : struct {
+			throw new Exception("The method or operation is not implemented.");
+		}
+
+		/// <inheritdoc />
+		public int LoadArrayAt<T>(int offset, int srcOffset, int count, params T[] src) where T : struct {
+			throw new Exception("The method or operation is not implemented.");
+		}
+
+		/// <inheritdoc />
+		public int SaveArray<T>(T[] dst) where T : struct {
+			throw new Exception("The method or operation is not implemented.");
+		}
+
+		/// <inheritdoc />
+		public int SaveArrayAt<T>(int offset, int dstOffset, int count, T[] dst) where T : struct {
+			throw new Exception("The method or operation is not implemented.");
+		}
+
+		/// <inheritdoc />
+		public byte[] ToByteArray() {
+			return new Byte[] { B0, B1, B2, B3 };
+		}
+
+		/// <inheritdoc />
+		public short[] ToInt16Array() {
+			return new Int16[] { S0, S1 };
+		}
+
+		#endregion
+
+		#region IUnionInt Member
+
+		/// <inheritdoc />
+		public int[] ToInt32Array() {
+			return new Int32[] { I0 };
+		}
+
+		/// <inheritdoc />
+		public float[] ToSingleArray() {
+			return new Single[] { F0 };
 		}
 
 		#endregion

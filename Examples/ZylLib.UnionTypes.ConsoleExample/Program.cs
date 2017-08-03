@@ -22,7 +22,7 @@ namespace ZylLib.UnionTypes.ConsoleExample {
 		/// </summary>
 		/// <param name="sb">String buffer.</param>
 		public static void TestShort(StringBuilder sb) {
-			sb.AppendLine("[UnionShort]");
+			sb.AppendLine("[TestShort]");
 			// ctor.
 			UnionShort v = new UnionShort(0x8765);
 			sb.AppendLine(string.Format("S: {0} // HEX {0:X4}", v.S0));
@@ -31,6 +31,10 @@ namespace ZylLib.UnionTypes.ConsoleExample {
 			sb.AppendLine(string.Format("Equals(null): {0}", v.Equals(null)));
 			sb.AppendLine(string.Format("GetHashCode: {0}", v.GetHashCode()));
 			sb.AppendLine(string.Format("ToString: {0}", v.ToString()));
+			sb.AppendLine(StrByArray("ToSByteArray", v.ToSByteArray()));
+			sb.AppendLine(StrByArray("ToByteArray", v.ToByteArray()));
+			sb.AppendLine(StrByArray("ToUInt16Array", v.ToUInt16Array()));
+			sb.AppendLine(StrByArray("ToInt16Array", v.ToInt16Array()));
 			// done.
 			sb.AppendLine();
 		}
@@ -51,6 +55,11 @@ namespace ZylLib.UnionTypes.ConsoleExample {
 			sb.AppendLine(string.Format("Equals(null): {0}", v.Equals(null)));
 			sb.AppendLine(string.Format("GetHashCode: {0}", v.GetHashCode()));
 			sb.AppendLine(string.Format("ToString: {0}", v.ToString()));
+			sb.AppendLine(StrByArray("ToByteArray", v.ToByteArray()));
+			sb.AppendLine(StrByArray("ToInt16Array", v.ToInt16Array()));
+			sb.AppendLine(StrByArray("ToUInt32Array", v.ToUInt32Array()));
+			sb.AppendLine(StrByArray("ToInt32Array", v.ToInt32Array()));
+			sb.AppendLine(StrByArray("ToSingleArray", v.ToSingleArray()));
 			// done.
 			sb.AppendLine();
 		}
@@ -73,8 +82,39 @@ namespace ZylLib.UnionTypes.ConsoleExample {
 			sb.AppendLine(string.Format("Equals(null): {0}", v.Equals(null)));
 			sb.AppendLine(string.Format("GetHashCode: {0}", v.GetHashCode()));
 			sb.AppendLine(string.Format("ToString: {0}", v.ToString()));
+			sb.AppendLine(StrByArray("ToByteArray", v.ToByteArray()));
+			sb.AppendLine(StrByArray("ToInt16Array", v.ToInt16Array()));
+			sb.AppendLine(StrByArray("ToInt32Array", v.ToInt32Array()));
+			sb.AppendLine(StrByArray("ToSingleArray", v.ToSingleArray()));
+			sb.AppendLine(StrByArray("ToUInt64Array", v.ToUInt64Array()));
+			sb.AppendLine(StrByArray("ToInt64Array", v.ToInt64Array()));
+			sb.AppendLine(StrByArray("ToDoubleArray", v.ToDoubleArray()));
 			// done.
 			sb.AppendLine();
+		}
+
+		/// <summary>
+		/// Get string by array(取得数组的字符串说明).
+		/// </summary>
+		/// <typeparam name="T">Array element type (数组元素类型).</typeparam>
+		/// <param name="name">Name (名称).</param>
+		/// <param name="arr">Array (数组).</param>
+		/// <returns>Return string by array (返回字符串说明).</returns>
+		private static string StrByArray<T>(string name, T[] arr) {
+			StringBuilder sb = new StringBuilder();
+			sb.AppendFormat("{0}: ", name);
+			if (null == arr) {
+				sb.Append("null");
+			}
+			else {
+				sb.Append(arr);
+				sb.AppendFormat(", Length={0}", arr.Length);
+				sb.Append(", Data=");
+				foreach(T n in arr) {
+					sb.AppendFormat(" {0}", n);
+				}
+			}
+			return sb.ToString();
 		}
 
 	}
