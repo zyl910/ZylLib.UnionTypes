@@ -41,6 +41,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\ZylLib.UnionTypes\ZylLib.UnionTypes.net20.csproj">
+      <Project>{5A124D32-5E79-44A9-B584-BC361A6E4702}</Project>
+      <Name>ZylLib.UnionTypes.net20</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

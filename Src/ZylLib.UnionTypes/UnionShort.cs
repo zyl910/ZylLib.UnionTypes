@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace ZylLib.UnionTypes {
 	/// <summary>
-	/// 2 byte union type. Example `short[1]`
+	/// Short union type, size is 2 byte (短整数联合体, 大小为2字节). Like `short[1]` .
 	/// </summary>
 	/// <remarks>
 	/// In multithreaded environments, It is recommended to Thread.MemoryBarrier before read (在多线程环境下，建议在读取之前调用Thread.MemoryBarrier).
@@ -13,7 +13,7 @@ namespace ZylLib.UnionTypes {
 	/// 
 	/// <namespace>
 	/// <summary>
-	/// Union types in C# (C#中的联合体类型)
+	/// Union types in C# (C#的联合体类型)
 	/// </summary>
 	/// </namespace>
 	[Serializable]
@@ -39,7 +39,7 @@ namespace ZylLib.UnionTypes {
 		public byte B1;
 
 		/// <summary>
-		/// Create UnionShort, params has short type.
+		/// Construction UnionShort, argument is short type (构造 UnionShort, 参数是 short 类型).
 		/// </summary>
 		/// <param name="v">Value</param>
 		public UnionShort(short v) {
@@ -51,7 +51,7 @@ namespace ZylLib.UnionTypes {
 		}
 
 		/// <summary>
-		/// Create UnionShort, params has ushort type.
+		/// Construction UnionShort, argument is ushort type (构造 UnionShort, 参数是 ushort 类型).
 		/// </summary>
 		/// <param name="v">Value</param>
 		[CLSCompliant(false)]

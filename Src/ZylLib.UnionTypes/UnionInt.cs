@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace ZylLib.UnionTypes {
 	/// <summary>
-	/// 4 byte union type. Example `short[2]`, `int[1]`, `float[1]` .
+	/// Int union type, size is 4 byte (整数联合体, 大小为4字节). Like `short[2]`, `int[1]`, `float[1]` .
 	/// </summary>
 	/// <remarks>
 	/// In multithreaded environments, It is recommended to Thread.MemoryBarrier before read (在多线程环境下，建议在读取之前调用Thread.MemoryBarrier).
@@ -24,6 +24,7 @@ namespace ZylLib.UnionTypes {
 		public uint UI0;
 
 		/// <summary>float(Single) 0</summary>
+		[NonSerialized]
 		[FieldOffset(0)]
 		public float F0;
 
@@ -65,7 +66,7 @@ namespace ZylLib.UnionTypes {
 		public byte B3;
 
 		/// <summary>
-		/// Create UnionInt, params has int type.
+		/// Construction UnionInt, argument is int type (构造 UnionInt, 参数是 int 类型).
 		/// </summary>
 		/// <param name="v">Value</param>
 		public UnionInt(int v) {
@@ -84,7 +85,7 @@ namespace ZylLib.UnionTypes {
 		}
 
 		/// <summary>
-		/// Create UnionInt, params has uint type.
+		/// Construction UnionInt, argument is uint type (构造 UnionInt, 参数是 uint 类型).
 		/// </summary>
 		/// <param name="v">Value</param>
 		[CLSCompliant(false)]
@@ -104,7 +105,7 @@ namespace ZylLib.UnionTypes {
 		}
 
 		/// <summary>
-		/// Create UnionInt, params has float type.
+		/// Construction UnionInt, argument is float type (构造 UnionInt, 参数是 float 类型).
 		/// </summary>
 		/// <param name="v">Value</param>
 		public UnionInt(float v) {

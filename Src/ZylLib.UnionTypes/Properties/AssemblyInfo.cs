@@ -22,7 +22,7 @@ using System.Security;
 #else
 [assembly: AssemblyTitle("ZylLib.UnionTypes")]
 #endif
-[assembly: AssemblyDescription("Union types in C# (C#中的联合体类型)")]
+[assembly: AssemblyDescription("Union types in C# (C#的联合体类型)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("zyl910")]
 [assembly: AssemblyProduct("ZylLib.UnionTypes")]
