@@ -342,12 +342,12 @@ namespace ZylLib.UnionTypes {
 
 		/// <inheritdoc />
 		public long[] ToInt64Array() {
-			return new Int64[] { I0 };
+			return new Int64[] { L0 };
 		}
 
 		/// <inheritdoc />
 		public double[] ToDoubleArray() {
-			return new Double[] { I0 };
+			return new Double[] { D0 };
 		}
 
 		#endregion
