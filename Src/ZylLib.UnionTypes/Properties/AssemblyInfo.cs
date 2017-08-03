@@ -9,10 +9,10 @@ using System.Security;
 // associated with an assembly.
 #if (NETSTANDARD1_0)
 [assembly: AssemblyTitle("ZylLib.UnionTypes for .NET Standard 1.0")]
-#elif (NET40)
-[assembly: AssemblyTitle("ZylLib.UnionTypes for .NET 4.0")]
 #elif (NET40 && PORTABLE)
 [assembly: AssemblyTitle("ZylLib.UnionTypes for Portable .NET 4.0")]
+#elif (NET40)
+[assembly: AssemblyTitle("ZylLib.UnionTypes for .NET 4.0")]
 #elif (NET20)
 [assembly: AssemblyTitle("ZylLib.UnionTypes for .NET 2.0")]
 #elif (NETSTANDARD)
@@ -57,4 +57,7 @@ using System.Security;
 
 [assembly: CLSCompliant(true)]
 
+#if (PORTABLE)
+#else
 [assembly: AllowPartiallyTrustedCallers]
+#endif

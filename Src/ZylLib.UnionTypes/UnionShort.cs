@@ -16,7 +16,10 @@ namespace ZylLib.UnionTypes {
 	/// Union types in C# (C#的联合体类型)
 	/// </summary>
 	/// </namespace>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 	[Serializable]
+#endif
 	[StructLayout(LayoutKind.Explicit, Size = 2)]
 	public struct UnionShort : IUnionShort {
 		/// <summary>short(Int16) 0</summary>
@@ -24,17 +27,26 @@ namespace ZylLib.UnionTypes {
 		public short S0;
 
 		/// <summary>ushort(UInt16) 0</summary>
-		[CLSCompliant(false)]
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
+		[CLSCompliant(false)]
 		[FieldOffset(0)]
 		public ushort US0;
 
 		/// <summary>byte(Byte) 0</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(0)]
 		public byte B0;
 		/// <summary>byte(Byte) 1</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(1)]
 		public byte B1;
 

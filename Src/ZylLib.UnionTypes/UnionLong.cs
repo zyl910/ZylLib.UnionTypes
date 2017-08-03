@@ -10,7 +10,10 @@ namespace ZylLib.UnionTypes {
 	/// <remarks>
 	/// In multithreaded environments, It is recommended to Thread.MemoryBarrier before read (在多线程环境下，建议在读取之前调用Thread.MemoryBarrier).
 	/// </remarks>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 	[Serializable]
+#endif
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	public struct UnionLong : IUnionLong, IUnionInt, IUnionShort {
 		/// <summary>long(Int64) 0</summary>
@@ -18,113 +21,185 @@ namespace ZylLib.UnionTypes {
 		public long L0;
 
 		/// <summary>ulong(UInt64) 0</summary>
-		[CLSCompliant(false)]
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
+		[CLSCompliant(false)]
 		[FieldOffset(0)]
 		public ulong UL0;
 
 		/// <summary>double(Double) 0</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(0)]
 		public double D0;
 
 		/// <summary>int(Int32) 0</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(0)]
 		public int I0;
 		/// <summary>int(Int32) 1</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(4)]
 		public int I1;
 
 		/// <summary>uint(UInt32) 0</summary>
 		[CLSCompliant(false)]
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(0)]
 		public uint UI0;
 		/// <summary>uint(UInt32) 1</summary>
-		[CLSCompliant(false)]
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
+		[CLSCompliant(false)]
 		[FieldOffset(4)]
 		public uint UI1;
 
 		/// <summary>float(Single) 0</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(0)]
 		public float F0;
 		/// <summary>float(Single) 0</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(4)]
 		public float F1;
 
 		/// <summary>short(Int16) 0</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(0)]
 		public short S0;
 		/// <summary>short(Int16) 1</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(2)]
 		public short S1;
 		/// <summary>short(Int16) 2</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(4)]
 		public short S2;
 		/// <summary>short(Int16) 3</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(6)]
 		public short S3;
 
 		/// <summary>ushort(UInt16) 0</summary>
-		[CLSCompliant(false)]
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
+		[CLSCompliant(false)]
 		[FieldOffset(0)]
 		public ushort US0;
 		/// <summary>ushort(UInt16) 1</summary>
-		[CLSCompliant(false)]
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
+		[CLSCompliant(false)]
 		[FieldOffset(2)]
 		public ushort US1;
 		/// <summary>ushort(UInt16) 2</summary>
-		[CLSCompliant(false)]
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
+		[CLSCompliant(false)]
 		[FieldOffset(4)]
 		public ushort US2;
 		/// <summary>ushort(UInt16) 3</summary>
-		[CLSCompliant(false)]
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
+		[CLSCompliant(false)]
 		[FieldOffset(6)]
 		public ushort US3;
 
 		/// <summary>byte(Byte) 0</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(0)]
 		public byte B0;
 		/// <summary>byte(Byte) 1</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(1)]
 		public byte B1;
 		/// <summary>byte(Byte) 2</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(2)]
 		public byte B2;
 		/// <summary>byte(Byte) 3</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(3)]
 		public byte B3;
 		/// <summary>byte(Byte) 4</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(4)]
 		public byte B4;
 		/// <summary>byte(Byte) 5</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(5)]
 		public byte B5;
 		/// <summary>byte(Byte) 6</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(6)]
 		public byte B6;
 		/// <summary>byte(Byte) 7</summary>
+#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#else
 		[NonSerialized]
+#endif
 		[FieldOffset(7)]
 		public byte B7;
 
