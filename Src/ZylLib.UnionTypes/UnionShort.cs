@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Xml.Serialization;
 
 namespace ZylLib.UnionTypes {
 	/// <summary>
@@ -31,6 +32,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[CLSCompliant(false)]
 		[FieldOffset(0)]
 		public ushort US0;
@@ -40,6 +42,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[FieldOffset(0)]
 		public byte B0;
 		/// <summary>byte(Byte) 1</summary>
@@ -47,6 +50,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[FieldOffset(1)]
 		public byte B1;
 

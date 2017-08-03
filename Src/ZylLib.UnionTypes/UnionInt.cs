@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Xml.Serialization;
 
 namespace ZylLib.UnionTypes {
 	/// <summary>
@@ -25,6 +26,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[CLSCompliant(false)]
 		[FieldOffset(0)]
 		public uint UI0;
@@ -34,6 +36,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[FieldOffset(0)]
 		public float F0;
 
@@ -42,6 +45,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[FieldOffset(0)]
 		public short S0;
 		/// <summary>short(Int16) 1</summary>
@@ -49,6 +53,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[FieldOffset(2)]
 		public short S1;
 
@@ -57,6 +62,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[CLSCompliant(false)]
 		[FieldOffset(0)]
 		public ushort US0;
@@ -65,6 +71,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[CLSCompliant(false)]
 		[FieldOffset(2)]
 		public ushort US1;
@@ -74,6 +81,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[FieldOffset(0)]
 		public byte B0;
 		/// <summary>byte(Byte) 1</summary>
@@ -81,6 +89,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[FieldOffset(1)]
 		public byte B1;
 		/// <summary>byte(Byte) 2</summary>
@@ -88,6 +97,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[FieldOffset(2)]
 		public byte B2;
 		/// <summary>byte(Byte) 3</summary>
@@ -95,6 +105,7 @@ namespace ZylLib.UnionTypes {
 #else
 		[NonSerialized]
 #endif
+		[XmlIgnore]
 		[FieldOffset(3)]
 		public byte B3;
 

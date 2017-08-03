@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Xml.Serialization;
 using ZylLib.UnionTypes;
 
 namespace ZylLib.UnionTypes.ConsoleExample {
@@ -35,6 +37,12 @@ namespace ZylLib.UnionTypes.ConsoleExample {
 			sb.AppendLine(StrByArray("ToByteArray", v.ToByteArray()));
 			sb.AppendLine(StrByArray("ToUInt16Array", v.ToUInt16Array()));
 			sb.AppendLine(StrByArray("ToInt16Array", v.ToInt16Array()));
+			// XmlSerializer
+			XmlSerializer serializer = new XmlSerializer(v.GetType());
+			using (StringWriter sw = new StringWriter(sb)) {
+				serializer.Serialize(sw, v);
+			}
+			sb.AppendLine();
 			// done.
 			sb.AppendLine();
 		}
@@ -60,6 +68,12 @@ namespace ZylLib.UnionTypes.ConsoleExample {
 			sb.AppendLine(StrByArray("ToUInt32Array", v.ToUInt32Array()));
 			sb.AppendLine(StrByArray("ToInt32Array", v.ToInt32Array()));
 			sb.AppendLine(StrByArray("ToSingleArray", v.ToSingleArray()));
+			// XmlSerializer
+			XmlSerializer serializer = new XmlSerializer(v.GetType());
+			using (StringWriter sw = new StringWriter(sb)) {
+				serializer.Serialize(sw, v);
+			}
+			sb.AppendLine();
 			// done.
 			sb.AppendLine();
 		}
@@ -89,6 +103,12 @@ namespace ZylLib.UnionTypes.ConsoleExample {
 			sb.AppendLine(StrByArray("ToUInt64Array", v.ToUInt64Array()));
 			sb.AppendLine(StrByArray("ToInt64Array", v.ToInt64Array()));
 			sb.AppendLine(StrByArray("ToDoubleArray", v.ToDoubleArray()));
+			// XmlSerializer
+			XmlSerializer serializer = new XmlSerializer(v.GetType());
+			using (StringWriter sw = new StringWriter(sb)) {
+				serializer.Serialize(sw, v);
+			}
+			sb.AppendLine();
 			// done.
 			sb.AppendLine();
 		}
