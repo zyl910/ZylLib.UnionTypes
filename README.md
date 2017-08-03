@@ -27,6 +27,6 @@ Features (特性) :
 Target frameworks (目标框架):
 
 * `net20`: .NET Framework 2.0 . Support VS2005(VS8.0)+ .
-* `net40`: .NET Framework 4.0 . Support VS2010(VS10.0)+ .
+* `net40`: .NET Framework 4.0 Client Profile. Support VS2010(VS10.0)+ .
 * `portable40`: Portable Class Library Profile1 (可移植库配置1), portable-net40+win8+sl4+wp7+xbox . Support VS2010(VS10.0)+ .
 * `netstandard1.0`: .NET Standard 1.0 . Support VS2015(VS14.0)+ .
