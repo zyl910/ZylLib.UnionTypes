@@ -4,6 +4,12 @@ using System.IO;
 using System.Text;
 using System.Xml.Serialization;
 using ZylLib.UnionTypes;
+#if (NET20 || NET30)
+#else
+// .NET 3.5: System.Runtime.Serialization.dll .
+// Silverlight 3: System.ServiceModel.Web.dll.
+using System.Runtime.Serialization.Json;
+#endif
 
 namespace ZylLib.UnionTypes {
 	/// <summary>
@@ -49,6 +55,9 @@ namespace ZylLib.UnionTypes {
 				serializer.Serialize(sw, v);
 			}
 			sb.AppendLine();
+			// DataContractJsonSerializer .
+			sb.AppendLine(string.Format("DataContractJson: {0}", DataContractJson(v)));
+			sb.AppendLine();
 			// done.
 			sb.AppendLine();
 		}
@@ -79,6 +88,9 @@ namespace ZylLib.UnionTypes {
 			using (StringWriter sw = new StringWriter(sb)) {
 				serializer.Serialize(sw, v);
 			}
+			sb.AppendLine();
+			// DataContractJsonSerializer .
+			sb.AppendLine(string.Format("DataContractJson: {0}", DataContractJson(v)));
 			sb.AppendLine();
 			// done.
 			sb.AppendLine();
@@ -115,6 +127,9 @@ namespace ZylLib.UnionTypes {
 				serializer.Serialize(sw, v);
 			}
 			sb.AppendLine();
+			// DataContractJsonSerializer .
+			sb.AppendLine(string.Format("DataContractJson: {0}", DataContractJson(v)));
+			sb.AppendLine();
 			// done.
 			sb.AppendLine();
 		}
@@ -140,6 +155,28 @@ namespace ZylLib.UnionTypes {
 				}
 			}
 			return sb.ToString();
+		}
+
+		/// <summary>
+		/// DataContract json serialize (使用DataContract将对象序列化为JSON).
+		/// </summary>
+		/// <typeparam name="T">Type .</typeparam>
+		/// <param name="obj">Object .</param>
+		/// <returns>Return json string (返回JSON字符串).</returns>
+		private static string DataContractJson<T>(T obj) {
+			string rt = null;
+			if (null == obj) return rt;
+#if (NET20 || NET30)
+#else
+			using (MemoryStream ms = new MemoryStream()) {
+				DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(T));
+				ser.WriteObject(ms, obj);
+				byte[] json = ms.ToArray();
+				ms.Close();
+				rt = Encoding.UTF8.GetString(json, 0, json.Length);
+			}
+#endif
+			return rt;
 		}
 
 	}

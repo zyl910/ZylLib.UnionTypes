@@ -21,6 +21,7 @@ Features (特性) :
 * CLS Compliant (CLR兼容).
 * AllowPartiallyTrustedCallers. Allows an assembly to be called by partially trusted code (允许由部分信任的代码调用程序集).
 * Support Xml Serialization (支持Xml序列化).
+* Compatible with WCF's DataContract Serialization (兼容WCF的数据契约序列化).
 * Support Binary Serialization (支持二进制序列化). Only .NET Framework, because only it supports SerializableAttribute (仅.NET Framework 时, 因为只有它支持 SerializableAttribute ).
 * Generate .chm documentation by Sandcastle (Sandcastle生成的CHM文档).
 
@@ -28,5 +29,5 @@ Target frameworks (目标框架):
 
 * `net20`: .NET Framework 2.0 . Support VS2005(VS8.0)+ .
 * `net40`: .NET Framework 4.0 Client Profile. Support VS2010(VS10.0)+ .
-* `portable40`: Portable Class Library Profile1 (可移植库配置1), portable-net40+win8+sl4+wp7+xbox . Support VS2010(VS10.0)+ .
+* `portable40`: Portable Class Library Profile2 (可移植库配置2), portable-net40+win8+sl4+wp7 . Support VS2010(VS10.0)+ .
 * `netstandard1.0`: .NET Standard 1.0 . Support VS2015(VS14.0)+ .
