@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Serialization;
+#if (NET20)
+#else
+// .NET 3.0+: System.Runtime.Serialization.dll .
+using System.Runtime.Serialization;
+#endif
 
 namespace ZylLib.UnionTypes {
 	/// <summary>
@@ -15,9 +20,17 @@ namespace ZylLib.UnionTypes {
 #else
 	[Serializable]
 #endif
+#if (NET20)
+#else
+	[DataContract]
+#endif
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	public struct UnionInt : IUnionInt, IUnionShort {
 		/// <summary>int(Int32) 0</summary>
+#if (NET20)
+#else
+		[DataMember]
+#endif
 		[FieldOffset(0)]
 		public int I0;
 

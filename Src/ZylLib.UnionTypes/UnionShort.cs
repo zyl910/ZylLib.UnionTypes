@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Serialization;
-//#if (NET20)	// No need, because DataContract know XmlIgnoreAttribute (不需要, 因为 DataContract 认识 XmlIgnoreAttribute).
-//#else
-//// .NET 3.0+: System.Runtime.Serialization.dll .
-//using System.Runtime.Serialization;
-//#endif
+#if (NET20)
+#else
+// .NET 3.0+: System.Runtime.Serialization.dll .
+using System.Runtime.Serialization;
+#endif
 
 namespace ZylLib.UnionTypes {
 	/// <summary>
@@ -26,13 +26,17 @@ namespace ZylLib.UnionTypes {
 #else
 	[Serializable]
 #endif
-//#if (NET20)	// No need, because DataContract know XmlIgnoreAttribute (不需要, 因为 DataContract 认识 XmlIgnoreAttribute).
-//#else
-//	[DataContract]
-//#endif
+#if (NET20)
+#else
+	[DataContract]
+#endif
 	[StructLayout(LayoutKind.Explicit, Size = 2)]
 	public struct UnionShort : IUnionShort {
 		/// <summary>short(Int16) 0</summary>
+#if (NET20)
+#else
+		[DataMember]
+#endif
 		[FieldOffset(0)]
 		public short S0;
 
@@ -42,6 +46,10 @@ namespace ZylLib.UnionTypes {
 		[NonSerialized]
 #endif
 		[XmlIgnore]
+#if (NET20)	// No need, because DataContract know XmlIgnoreAttribute (不需要, 因为 DataContract 认识 XmlIgnoreAttribute).
+#else
+		[IgnoreDataMember]
+#endif
 		[CLSCompliant(false)]
 		[FieldOffset(0)]
 		public ushort US0;
