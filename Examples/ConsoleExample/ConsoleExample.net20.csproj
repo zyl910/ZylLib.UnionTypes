@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ZylLib.UnionTypes.ConsoleExample</RootNamespace>
-    <AssemblyName>ZylLib.UnionTypes.ConsoleExample</AssemblyName>
+    <AssemblyName>ConsoleExample</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

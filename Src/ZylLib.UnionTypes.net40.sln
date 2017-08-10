@@ -5,15 +5,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{B4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.net20.vs2010", "ZylLib.UnionTypes\ZylLib.UnionTypes.net20.vs2010.csproj", "{5A124D32-5E79-44A9-B584-BC361A6E4702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.ConsoleExample.net20.vs2010", "..\Examples\ZylLib.UnionTypes.ConsoleExample\ZylLib.UnionTypes.ConsoleExample.net20.vs2010.csproj", "{B7C17100-3414-44A3-8FEC-A84D780B25DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExample.net20.vs2010", "..\Examples\ConsoleExample\ConsoleExample.net20.vs2010.csproj", "{B7C17100-3414-44A3-8FEC-A84D780B25DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.portable40", "ZylLib.UnionTypes\ZylLib.UnionTypes.portable40.csproj", "{3BE38909-AA28-4C71-8568-F652EA252D7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.net40", "ZylLib.UnionTypes\ZylLib.UnionTypes.net40.csproj", "{02A0BECE-3DF5-4BC0-AFCE-D50F0D746E64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.ConsoleExample.net40", "..\Examples\ZylLib.UnionTypes.ConsoleExample\ZylLib.UnionTypes.ConsoleExample.net40.csproj", "{19023539-6AF3-4006-98FA-5CC8F2DD6CB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExample.net40", "..\Examples\ConsoleExample\ConsoleExample.net40.csproj", "{19023539-6AF3-4006-98FA-5CC8F2DD6CB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.SilverlightExample.sl40", "..\Examples\ZylLib.UnionTypes.SilverlightExample\ZylLib.UnionTypes.SilverlightExample.sl40.csproj", "{B9DD61EA-B837-43C7-B3E5-E2756A8CFF70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightExample.sl40", "..\Examples\SilverlightExample\SilverlightExample.sl40.csproj", "{B9DD61EA-B837-43C7-B3E5-E2756A8CFF70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

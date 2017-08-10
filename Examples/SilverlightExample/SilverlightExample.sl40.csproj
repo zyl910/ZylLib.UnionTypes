@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ZylLib.UnionTypes.SilverlightExample</RootNamespace>
-    <AssemblyName>ZylLib.UnionTypes.SilverlightExample</AssemblyName>
+    <AssemblyName>SilverlightExample</AssemblyName>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
@@ -18,7 +18,7 @@
     <SupportedCultures>zh-Hans</SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>ZylLib.UnionTypes.SilverlightExample.xap</XapFilename>
+    <XapFilename>SilverlightExample.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <SilverlightAppEntry>ZylLib.UnionTypes.SilverlightExample.sl40.App</SilverlightAppEntry>
     <TestPageFileName>ZylLib.UnionTypes.SilverlightExample.sl40TestPage.html</TestPageFileName>
