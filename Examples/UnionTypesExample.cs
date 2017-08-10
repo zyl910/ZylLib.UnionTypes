@@ -56,8 +56,15 @@ namespace ZylLib.UnionTypes {
 			}
 			sb.AppendLine();
 			// DataContractJsonSerializer .
-			sb.AppendLine(string.Format("DataContractJson: {0}", DataContractJson(v)));
-			sb.AppendLine();
+#if (NET20 || NET30)
+#else
+			string jsonstr = DataContractJson(v);
+			sb.AppendLine(string.Format("DataContractJson: {0}", jsonstr));
+			if (!string.IsNullOrEmpty(jsonstr)) {
+				UnionLong v2 = DataContractJsonDeserialize<UnionLong>(jsonstr);
+				sb.AppendLine(StrByArray("DataContractJsonDeserialize", v2.ToByteArray()));
+			}
+#endif
 			// done.
 			sb.AppendLine();
 		}
@@ -90,8 +97,15 @@ namespace ZylLib.UnionTypes {
 			}
 			sb.AppendLine();
 			// DataContractJsonSerializer .
-			sb.AppendLine(string.Format("DataContractJson: {0}", DataContractJson(v)));
-			sb.AppendLine();
+#if (NET20 || NET30)
+#else
+			string jsonstr = DataContractJson(v);
+			sb.AppendLine(string.Format("DataContractJson: {0}", jsonstr));
+			if (!string.IsNullOrEmpty(jsonstr)) {
+				UnionLong v2 = DataContractJsonDeserialize<UnionLong>(jsonstr);
+				sb.AppendLine(StrByArray("DataContractJsonDeserialize", v2.ToByteArray()));
+			}
+#endif
 			// done.
 			sb.AppendLine();
 		}
@@ -128,8 +142,15 @@ namespace ZylLib.UnionTypes {
 			}
 			sb.AppendLine();
 			// DataContractJsonSerializer .
-			sb.AppendLine(string.Format("DataContractJson: {0}", DataContractJson(v)));
-			sb.AppendLine();
+#if (NET20 || NET30)
+#else
+			string jsonstr = DataContractJson(v);
+			sb.AppendLine(string.Format("DataContractJson: {0}", jsonstr));
+			if (!string.IsNullOrEmpty(jsonstr)) {
+				UnionLong v2 = DataContractJsonDeserialize<UnionLong>(jsonstr);
+				sb.AppendLine(StrByArray("DataContractJsonDeserialize", v2.ToByteArray()));
+			}
+#endif
 			// done.
 			sb.AppendLine();
 		}
@@ -179,5 +200,23 @@ namespace ZylLib.UnionTypes {
 			return rt;
 		}
 
+		/// <summary>
+		/// DataContract json deserialize (使用DataContract将JSON反序列化为对象).
+		/// </summary>
+		/// <typeparam name="T">Type .</typeparam>
+		/// <param name="jsonString"></param>
+		/// <returns>Return object (返回反序列化后的对象).</returns>
+		public static T DataContractJsonDeserialize<T>(string jsonString) {
+			T rt = default(T);
+#if (NET20 || NET30)
+#else
+			DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(T));
+			using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonString))) {
+				rt = (T)ser.ReadObject(ms);
+				ms.Close();
+			}
+#endif
+				return rt;
+		}
 	}
 }
