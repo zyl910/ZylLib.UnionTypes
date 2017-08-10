@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExample.net40", "..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightExample.sl40", "..\Examples\SilverlightExample\SilverlightExample.sl40.csproj", "{B9DD61EA-B837-43C7-B3E5-E2756A8CFF70}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{B831BFAB-A51E-45C1-917A-5AC02BED88FB}"
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "ZylLib.UnionTypes.net40.doc", "Document\ZylLib.UnionTypes.net40.doc.shfbproj", "{1DE013DE-0235-46AF-BC1D-385325A84BE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +89,16 @@ Global
 		{B9DD61EA-B837-43C7-B3E5-E2756A8CFF70}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B9DD61EA-B837-43C7-B3E5-E2756A8CFF70}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B9DD61EA-B837-43C7-B3E5-E2756A8CFF70}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,5 +107,6 @@ Global
 		{B7C17100-3414-44A3-8FEC-A84D780B25DA} = {B4749CB6-8B2E-432B-828B-4C7F5C7F8B99}
 		{19023539-6AF3-4006-98FA-5CC8F2DD6CB6} = {B4749CB6-8B2E-432B-828B-4C7F5C7F8B99}
 		{B9DD61EA-B837-43C7-B3E5-E2756A8CFF70} = {B4749CB6-8B2E-432B-828B-4C7F5C7F8B99}
+		{1DE013DE-0235-46AF-BC1D-385325A84BE8} = {B831BFAB-A51E-45C1-917A-5AC02BED88FB}
 	EndGlobalSection
 EndGlobal

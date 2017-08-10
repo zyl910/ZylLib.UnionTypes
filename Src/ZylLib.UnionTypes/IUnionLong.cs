@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ZylLib.UnionTypes {
 	/// <summary>
-	/// Int union type interface (整数联合体接口).
+	/// Long union type interface (长整数联合体接口).
 	/// </summary>
 	public interface IUnionLong: IUnionInt {
 		/// <summary>

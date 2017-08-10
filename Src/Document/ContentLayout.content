@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="f5da691b-6661-4772-8340-ce0b1f853bc7" visible="True" isDefault="true" isSelected="true" title="Welcome to the ZylLib.UnionTypes" linkText="http://www.cnblogs.com/zyl910/tag/ZylLib.UnionTypes/">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="Welcome" />
+    </HelpKeywords>
+  </Topic>
+  <Topic id="df4b776d-6c04-4c15-8789-f5f4f012bb06" visible="True" isExpanded="true" title="Version History">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="version, history" />
+    </HelpKeywords>
+    <Topic id="b25407d0-7c17-4fba-91a5-e0df06a202a5" visible="True" title="Version 1.0.0.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 1.0.0.0" />
+      </HelpKeywords>
+    </Topic>
+  </Topic>
+</Topics>
