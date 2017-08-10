@@ -11,7 +11,7 @@ Struct (结构体) :
 
 Interfaces (接口) :
 
-* `IUnionShort`: Short union type interface (短整数联合体接口). Has LoadArray/LoadArrayAt/SaveArray/SaveArrayAt/ToByteArray/ToInt16Array methods.
+* `IUnionShort`: Short union type interface (短整数联合体接口). Has LoadBytes/LoadBytesAt/SaveBytes/SaveBytesAt/ToByteArray/ToInt16Array methods.
 * `IUnionInt`: Int union type interface (整数联合体接口). Inherited the IUnionShort interface. Has ToInt32Array/ToSingleArray methods.
 * `IUnionLong`: Long union type interface (长整数联合体接口). Inherited the IUnionInt interface. Has ToInt64Array/ToInt64Array methods.
 

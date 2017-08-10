@@ -8,15 +8,15 @@ namespace ZylLib.UnionTypes {
 	/// </summary>
 	public interface IUnionShort {
 		/// <summary>
-		/// Load from primitive array (从基元数组中加载数据) .
+		/// Load bytes from primitive array (从基元数组中加载字节数据) .
 		/// </summary>
 		/// <typeparam name="T">Array element type (数组元素类型). Must be primitive type (必须为基元类型).</typeparam>
 		/// <param name="src">The source buffer (源缓冲区).</param>
 		/// <returns>The total number of bytes load (加载到的字节总数).</returns>
-		int LoadArray<T>(params T[] src) where T : struct;
+		int LoadBytes<T>(params T[] src) where T : struct;
 
 		/// <summary>
-		/// Load from primitive array at offset (根据偏移量从基元数组中加载数据) .
+		/// Load bytes from primitive array use offset (根据偏移量从基元数组中加载字节数据) .
 		/// </summary>
 		/// <typeparam name="T">Array element type (数组元素类型). Must be primitive type (必须为基元类型).</typeparam>
 		/// <param name="offset">The zero-based byte offset be load (加载位置的字节偏移量，从零开始).</param>
@@ -24,18 +24,18 @@ namespace ZylLib.UnionTypes {
 		/// <param name="count">The number of bytes to load (要加载的字节数).</param>
 		/// <param name="src">The source buffer (源缓冲区).</param>
 		/// <returns>The total number of bytes load (加载到的字节总数).</returns>
-		int LoadArrayAt<T>(int offset, int srcOffset, int count, params T[] src) where T : struct;
+		int LoadBytesAt<T>(int offset, int srcOffset, int count, params T[] src) where T : struct;
 
 		/// <summary>
-		/// Save from primitive array (保存数据到基元数组中) .
+		/// Save bytes to primitive array (保存字节数据到基元数组中) .
 		/// </summary>
 		/// <typeparam name="T">Array element type (数组元素类型). Must be primitive type (必须为基元类型).</typeparam>
 		/// <param name="dst">The destination buffer (目标缓冲区).</param>
 		/// <returns>The total number of bytes save (保存到的字节总数).</returns>
-		int SaveArray<T>(T[] dst) where T : struct;
+		int SaveBytes<T>(T[] dst) where T : struct;
 
 		/// <summary>
-		/// Save from primitive array at offset (根据偏移量保存数据到基元数组中) .
+		/// Save bytes to primitive array use offset (根据偏移量保存字节数据到基元数组中) .
 		/// </summary>
 		/// <typeparam name="T">Array element type (数组元素类型). Must be primitive type (必须为基元类型).</typeparam>
 		/// <param name="offset">The zero-based byte offset be save (保存位置的字节偏移量，从零开始).</param>
@@ -43,7 +43,7 @@ namespace ZylLib.UnionTypes {
 		/// <param name="count">The number of bytes to save (要保存的字节数).</param>
 		/// <param name="dst">The destination buffer (目标缓冲区).</param>
 		/// <returns>The total number of bytes save (保存到的字节总数).</returns>
-		int SaveArrayAt<T>(int offset, int dstOffset, int count, T[] dst) where T : struct;
+		int SaveBytesAt<T>(int offset, int dstOffset, int count, T[] dst) where T : struct;
 
 		/// <summary>
 		/// To Byte array (转为 Byte 数组).

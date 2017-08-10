@@ -143,22 +143,22 @@ namespace ZylLib.UnionTypes {
 		#region IUnionShort Member
 
 		/// <inheritdoc />
-		public int LoadArray<T>(params T[] src) where T : struct {
+		public int LoadBytes<T>(params T[] src) where T : struct {
 			throw new Exception("The method or operation is not implemented.");
 		}
 
 		/// <inheritdoc />
-		public int LoadArrayAt<T>(int offset, int srcOffset, int count, params T[] src) where T : struct {
+		public int LoadBytesAt<T>(int offset, int srcOffset, int count, params T[] src) where T : struct {
 			throw new Exception("The method or operation is not implemented.");
 		}
 
 		/// <inheritdoc />
-		public int SaveArray<T>(T[] dst) where T : struct {
+		public int SaveBytes<T>(T[] dst) where T : struct {
 			throw new Exception("The method or operation is not implemented.");
 		}
 
 		/// <inheritdoc />
-		public int SaveArrayAt<T>(int offset, int dstOffset, int count, T[] dst) where T : struct {
+		public int SaveBytesAt<T>(int offset, int dstOffset, int count, T[] dst) where T : struct {
 			throw new Exception("The method or operation is not implemented.");
 		}
 
