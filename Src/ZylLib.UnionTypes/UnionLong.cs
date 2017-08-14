@@ -17,6 +17,9 @@ namespace ZylLib.UnionTypes {
 	/// In multithreaded environments, It is recommended to Thread.MemoryBarrier before read (在多线程环境下，建议在读取之前调用Thread.MemoryBarrier).
 	/// </remarks>
 	/// <threadsafety static="true" instance="false"/>
+	/// <revisionHistory>
+	///   <revision date="02/08/2017" version="1.0.0.0">Created.</revision>
+	/// </revisionHistory>
 #if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 	[Serializable]

@@ -18,6 +18,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{B831BFAB-A51E-45C1-917A-5AC02BED88FB}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "ZylLib.UnionTypes.net40.doc", "Document\ZylLib.UnionTypes.net40.doc.shfbproj", "{1DE013DE-0235-46AF-BC1D-385325A84BE8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{02A0BECE-3DF5-4BC0-AFCE-D50F0D746E64} = {02A0BECE-3DF5-4BC0-AFCE-D50F0D746E64}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

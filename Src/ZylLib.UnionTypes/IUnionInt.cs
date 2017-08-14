@@ -6,6 +6,9 @@ namespace ZylLib.UnionTypes {
 	/// <summary>
 	/// Int union type interface (整数联合体接口).
 	/// </summary>
+	/// <revisionHistory>
+	///   <revision date="03/08/2017" version="1.0.0.0">Created.</revision>
+	/// </revisionHistory>
 	public interface IUnionInt : IUnionShort {
 		/// <summary>
 		/// To Int32 array (转为 Int32 数组).

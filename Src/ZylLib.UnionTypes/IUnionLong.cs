@@ -6,7 +6,10 @@ namespace ZylLib.UnionTypes {
 	/// <summary>
 	/// Long union type interface (长整数联合体接口).
 	/// </summary>
-	public interface IUnionLong: IUnionInt {
+	/// <revisionHistory>
+	///   <revision date="03/08/2017" version="1.0.0.0">Created.</revision>
+	/// </revisionHistory>
+	public interface IUnionLong : IUnionInt {
 		/// <summary>
 		/// To Int64 array (转为 Int64 数组).
 		/// </summary>

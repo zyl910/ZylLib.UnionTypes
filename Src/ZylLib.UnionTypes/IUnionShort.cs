@@ -6,6 +6,9 @@ namespace ZylLib.UnionTypes {
 	/// <summary>
 	/// Short union type interface (短整数联合体接口).
 	/// </summary>
+	/// <revisionHistory>
+	///   <revision date="03/08/2017" version="1.0.0.0">Created.</revision>
+	/// </revisionHistory>
 	public interface IUnionShort {
 		/// <summary>
 		/// Load bytes from primitive array (从基元数组中加载字节数据) .
