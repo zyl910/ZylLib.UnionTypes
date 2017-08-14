@@ -48,6 +48,7 @@
     <Compile Include="IUnionInt.cs" />
     <Compile Include="IUnionLong.cs" />
     <Compile Include="IUnionShort.cs" />
+    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnionInt.cs" />
     <Compile Include="UnionLong.cs" />

@@ -43,6 +43,7 @@
     <Compile Include="UnionLong.cs" />
     <Compile Include="IUnionInt.cs" />
     <Compile Include="IUnionLong.cs" />
+    <Compile Include="NamespaceDoc.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

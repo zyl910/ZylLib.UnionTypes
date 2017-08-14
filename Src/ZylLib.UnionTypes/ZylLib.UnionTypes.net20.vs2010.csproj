@@ -67,6 +67,7 @@
     <Compile Include="UnionLong.cs" />
     <Compile Include="IUnionInt.cs" />
     <Compile Include="IUnionLong.cs" />
+    <Compile Include="NamespaceDoc.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
