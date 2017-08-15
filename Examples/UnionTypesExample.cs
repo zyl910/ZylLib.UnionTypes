@@ -135,6 +135,16 @@ namespace ZylLib.UnionTypes {
 			sb.AppendLine(StrByArray("ToUInt64Array", v.ToUInt64Array()));
 			sb.AppendLine(StrByArray("ToInt64Array", v.ToInt64Array()));
 			sb.AppendLine(StrByArray("ToDoubleArray", v.ToDoubleArray()));
+			// LoadBytes.
+			if (true) {
+				v.LoadBytesAt(5, 0, 2, (byte)0x55, (byte)0xAA);
+				short[] buf = new short[2];
+				v.SaveBytesAt(4, 0, 4, buf);
+				sb.AppendLine(string.Format("LoadBytesAt D: {0}", v.D0));
+				sb.AppendLine(string.Format("LoadBytesAt L: {0} // HEX {0:X16}", v.L0));
+				sb.AppendLine(string.Format("LoadBytesAt B(HEX): {0:X2} {1:X2} {2:X2} {3:X2} {4:X2} {5:X2} {6:X2} {7:X2}", v.B0, v.B1, v.B2, v.B3, v.B4, v.B5, v.B6, v.B7));
+				sb.AppendLine(StrByArray("SaveBytesAt", buf));
+			}
 			// XmlSerializer
 			XmlSerializer serializer = new XmlSerializer(v.GetType());
 			using (StringWriter sw = new StringWriter(sb)) {

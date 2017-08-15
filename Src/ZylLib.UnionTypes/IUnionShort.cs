@@ -16,6 +16,8 @@ namespace ZylLib.UnionTypes {
 		/// <typeparam name="T">Array element type (数组元素类型). Must be primitive type (必须为基元类型).</typeparam>
 		/// <param name="src">The source buffer (源缓冲区).</param>
 		/// <returns>The total number of bytes load (加载到的字节总数).</returns>
+		/// <exception cref="System.ArgumentNullException"><c>src</c> is null.</exception>
+		/// <exception cref="System.ArgumentException"><c>src</c> is not an array of primitives.</exception>
 		int LoadBytes<T>(params T[] src) where T : struct;
 
 		/// <summary>
@@ -27,6 +29,9 @@ namespace ZylLib.UnionTypes {
 		/// <param name="count">The number of bytes to load (要加载的字节数).</param>
 		/// <param name="src">The source buffer (源缓冲区).</param>
 		/// <returns>The total number of bytes load (加载到的字节总数).</returns>
+		/// <exception cref="System.ArgumentNullException"><c>src</c> is null.</exception>
+		/// <exception cref="System.ArgumentException"><c>src</c> is not an array of primitives.</exception>
+		/// <exception cref="System.ArgumentOutOfRangeException"><c>offset</c>, srcOffset</c>, or <c>count</c> is less than 0.</exception>
 		int LoadBytesAt<T>(int offset, int srcOffset, int count, params T[] src) where T : struct;
 
 		/// <summary>
@@ -35,6 +40,8 @@ namespace ZylLib.UnionTypes {
 		/// <typeparam name="T">Array element type (数组元素类型). Must be primitive type (必须为基元类型).</typeparam>
 		/// <param name="dst">The destination buffer (目标缓冲区).</param>
 		/// <returns>The total number of bytes save (保存到的字节总数).</returns>
+		/// <exception cref="System.ArgumentNullException"><c>dst</c> is null.</exception>
+		/// <exception cref="System.ArgumentException"><c>dst</c> is not an array of primitives.</exception>
 		int SaveBytes<T>(T[] dst) where T : struct;
 
 		/// <summary>
@@ -46,6 +53,9 @@ namespace ZylLib.UnionTypes {
 		/// <param name="count">The number of bytes to save (要保存的字节数).</param>
 		/// <param name="dst">The destination buffer (目标缓冲区).</param>
 		/// <returns>The total number of bytes save (保存到的字节总数).</returns>
+		/// <exception cref="System.ArgumentNullException"><c>dst</c> is null.</exception>
+		/// <exception cref="System.ArgumentException"><c>dst</c> is not an array of primitives.</exception>
+		/// <exception cref="System.ArgumentOutOfRangeException"><c>offset</c>, dstOffset</c>, or <c>count</c> is less than 0.</exception>
 		int SaveBytesAt<T>(int offset, int dstOffset, int count, T[] dst) where T : struct;
 
 		/// <summary>

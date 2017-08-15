@@ -30,6 +30,9 @@ namespace ZylLib.UnionTypes {
 #endif
 	[StructLayout(LayoutKind.Explicit, Size = 2)]
 	public struct UnionShort : IUnionShort {
+		/// <summary>The bytes size of this instance (此实例的字节大小).</summary>
+		public const int BytesSize = 2;
+
 		/// <summary>short(Int16) 0</summary>
 #if (NET20)
 #else
@@ -117,6 +120,10 @@ namespace ZylLib.UnionTypes {
 
 		#endregion
 
+		#region Property
+
+		#endregion
+
 		#region Object Member
 		/// <summary>
 		/// Determines whether the specified object is equal to the current object (确定指定的对象是否等于当前对象).
@@ -152,22 +159,47 @@ namespace ZylLib.UnionTypes {
 
 		/// <inheritdoc />
 		public int LoadBytes<T>(params T[] src) where T : struct {
-			throw new Exception("The method or operation is not implemented.");
+			return LoadBytesAt(0, 0, BytesSize, src);
 		}
 
 		/// <inheritdoc />
 		public int LoadBytesAt<T>(int offset, int srcOffset, int count, params T[] src) where T : struct {
-			throw new Exception("The method or operation is not implemented.");
+			if (null == src) throw new ArgumentNullException("src", "src is null!");
+			if (offset < 0) throw new ArgumentException("offset is less than 0!", "offset");
+			if (srcOffset < 0) throw new ArgumentException("srcOffset is less than 0!", "srcOffset");
+			if (count < 0) throw new ArgumentException("count is less than 0!", "count");
+			if ((offset + count) > BytesSize) count = BytesSize - offset;
+			if (count <= 0) return count;
+			int srcSize = Buffer.ByteLength(src);
+			if ((srcOffset + count) > srcSize) count = srcSize - srcOffset;
+			if (count > 0) {
+				short[] buf = new short[1] { S0 };
+				Buffer.BlockCopy(src, srcOffset, buf, offset, count);
+				S0 = buf[0];
+			}
+			return count;
 		}
 
 		/// <inheritdoc />
 		public int SaveBytes<T>(T[] dst) where T : struct {
-			throw new Exception("The method or operation is not implemented.");
+			return SaveBytesAt(0, 0, BytesSize, dst);
 		}
 
 		/// <inheritdoc />
 		public int SaveBytesAt<T>(int offset, int dstOffset, int count, T[] dst) where T : struct {
-			throw new Exception("The method or operation is not implemented.");
+			if (null == dst) throw new ArgumentNullException("dst", "dst is null!");
+			if (offset < 0) throw new ArgumentException("offset is less than 0!", "offset");
+			if (dstOffset < 0) throw new ArgumentException("dstOffset is less than 0!", "dstOffset");
+			if (count < 0) throw new ArgumentException("count is less than 0!", "count");
+			if ((offset + count) > BytesSize) count = BytesSize - offset;
+			if (count <= 0) return count;
+			int dstSize = Buffer.ByteLength(dst);
+			if ((dstOffset + count) > dstSize) count = dstSize - dstOffset;
+			if (count > 0) {
+				short[] buf = new short[1] { S0 };
+				Buffer.BlockCopy(buf, offset, dst, dstOffset, count);
+			}
+			return count;
 		}
 
 		/// <inheritdoc />

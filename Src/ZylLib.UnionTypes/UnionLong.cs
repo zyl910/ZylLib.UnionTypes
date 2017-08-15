@@ -30,6 +30,9 @@ namespace ZylLib.UnionTypes {
 #endif
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	public struct UnionLong : IUnionLong, IUnionInt, IUnionShort {
+		/// <summary>The bytes size of this instance (此实例的字节大小).</summary>
+		public const int BytesSize = 8;
+
 		/// <summary>long(Int64) 0</summary>
 #if (NET20)
 #else
@@ -421,22 +424,47 @@ namespace ZylLib.UnionTypes {
 
 		/// <inheritdoc />
 		public int LoadBytes<T>(params T[] src) where T : struct {
-			throw new Exception("The method or operation is not implemented.");
+			return LoadBytesAt(0, 0, BytesSize, src);
 		}
 
 		/// <inheritdoc />
 		public int LoadBytesAt<T>(int offset, int srcOffset, int count, params T[] src) where T : struct {
-			throw new Exception("The method or operation is not implemented.");
+			if (null == src) throw new ArgumentNullException("src", "src is null!");
+			if (offset < 0) throw new ArgumentException("offset is less than 0!", "offset");
+			if (srcOffset < 0) throw new ArgumentException("srcOffset is less than 0!", "srcOffset");
+			if (count < 0) throw new ArgumentException("count is less than 0!", "count");
+			if ((offset + count) > BytesSize) count = BytesSize - offset;
+			if (count <= 0) return count;
+			int srcSize = Buffer.ByteLength(src);
+			if ((srcOffset + count) > srcSize) count = srcSize - srcOffset;
+			if (count > 0) {
+				long[] buf = new long[1] { L0 };
+				Buffer.BlockCopy(src, srcOffset, buf, offset, count);
+				L0 = buf[0];
+			}
+			return count;
 		}
 
 		/// <inheritdoc />
 		public int SaveBytes<T>(T[] dst) where T : struct {
-			throw new Exception("The method or operation is not implemented.");
+			return SaveBytesAt(0, 0, BytesSize, dst);
 		}
 
 		/// <inheritdoc />
 		public int SaveBytesAt<T>(int offset, int dstOffset, int count, T[] dst) where T : struct {
-			throw new Exception("The method or operation is not implemented.");
+			if (null == dst) throw new ArgumentNullException("dst", "dst is null!");
+			if (offset < 0) throw new ArgumentException("offset is less than 0!", "offset");
+			if (dstOffset < 0) throw new ArgumentException("dstOffset is less than 0!", "dstOffset");
+			if (count < 0) throw new ArgumentException("count is less than 0!", "count");
+			if ((offset + count) > BytesSize) count = BytesSize - offset;
+			if (count <= 0) return count;
+			int dstSize = Buffer.ByteLength(dst);
+			if ((dstOffset + count) > dstSize) count = dstSize - dstOffset;
+			if (count > 0) {
+				long[] buf = new long[1] { L0 };
+				Buffer.BlockCopy(buf, offset, dst, dstOffset, count);
+			}
+			return count;
 		}
 
 		/// <inheritdoc />
