@@ -246,7 +246,7 @@ namespace ZylLib.UnionTypes {
 		public byte B7;
 
 		/// <summary>
-		/// Create UnionLong, argument is long type.
+		/// Initializes a new instance of the UnionLong class using a long value (使用 long 值初始化 UnionLong 类的新实例).
 		/// </summary>
 		/// <param name="v">Value</param>
 		public UnionLong(long v) {
@@ -279,7 +279,7 @@ namespace ZylLib.UnionTypes {
 		}
 
 		/// <summary>
-		/// Create UnionLong, argument is ulong type.
+		/// Initializes a new instance of the UnionLong class using a ulong value (使用 ulong 值初始化 UnionLong 类的新实例).
 		/// </summary>
 		/// <param name="v">Value</param>
 		[CLSCompliant(false)]
@@ -313,7 +313,7 @@ namespace ZylLib.UnionTypes {
 		}
 
 		/// <summary>
-		/// Create UnionLong, argument is double type.
+		/// Initializes a new instance of the UnionLong class using a double value (使用 double 值初始化 UnionLong 类的新实例).
 		/// </summary>
 		/// <param name="v">Value</param>
 		public UnionLong(double v) {
@@ -387,7 +387,11 @@ namespace ZylLib.UnionTypes {
 		#endregion
 
 		#region Object Member
-		/// <inheritdoc />
+		/// <summary>
+		/// Determines whether the specified object is equal to the current object (确定指定的对象是否等于当前对象).
+		/// </summary>
+		/// <param name="obj">The object to compare with the current object.</param>
+		/// <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
 		public override bool Equals(object obj) {
 			if (null == obj) return false;
 			if (!(obj is UnionLong)) return false;
@@ -395,12 +399,18 @@ namespace ZylLib.UnionTypes {
 			return (L0 == a.L0);
 		}
 
-		/// <inheritdoc />
+		/// <summary>
+		/// Returns the hash code for the current object (返回当前对象的哈希代码).
+		/// </summary>
+		/// <returns>A hash code for the current object.</returns>
 		public override int GetHashCode() {
 			return L0.GetHashCode();
 		}
 
-		/// <inheritdoc />
+		/// <summary>
+		/// Returns a string that represents the current object (返回表示当前对象的字符串).
+		/// </summary>
+		/// <returns>A string that represents the current object.</returns>
 		public override string ToString() {
 			return L0.ToString();
 		}

@@ -70,7 +70,7 @@ namespace ZylLib.UnionTypes {
 		public byte B1;
 
 		/// <summary>
-		/// Construction UnionShort, argument is short type (构造 UnionShort, 参数是 short 类型).
+		/// Initializes a new instance of the UnionShort class using a short value (使用 short 值初始化 UnionShort 类的新实例).
 		/// </summary>
 		/// <param name="v">Value</param>
 		public UnionShort(short v) {
@@ -82,7 +82,7 @@ namespace ZylLib.UnionTypes {
 		}
 
 		/// <summary>
-		/// Construction UnionShort, argument is ushort type (构造 UnionShort, 参数是 ushort 类型).
+		/// Initializes a new instance of the UnionShort class using a ushort value (使用 ushort 值初始化 UnionShort 类的新实例).
 		/// </summary>
 		/// <param name="v">Value</param>
 		[CLSCompliant(false)]
@@ -118,7 +118,11 @@ namespace ZylLib.UnionTypes {
 		#endregion
 
 		#region Object Member
-		/// <inheritdoc />
+		/// <summary>
+		/// Determines whether the specified object is equal to the current object (确定指定的对象是否等于当前对象).
+		/// </summary>
+		/// <param name="obj">The object to compare with the current object.</param>
+		/// <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
 		public override bool Equals(object obj) {
 			if (null == obj) return false;
 			if (!(obj is UnionShort)) return false;
@@ -126,12 +130,18 @@ namespace ZylLib.UnionTypes {
 			return (S0 == a.S0);
 		}
 
-		/// <inheritdoc />
+		/// <summary>
+		/// Returns the hash code for the current object (返回当前对象的哈希代码).
+		/// </summary>
+		/// <returns>A hash code for the current object.</returns>
 		public override int GetHashCode() {
 			return S0.GetHashCode();
 		}
 
-		/// <inheritdoc />
+		/// <summary>
+		/// Returns a string that represents the current object (返回表示当前对象的字符串).
+		/// </summary>
+		/// <returns>A string that represents the current object.</returns>
 		public override string ToString() {
 			return S0.ToString();
 		}

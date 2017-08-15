@@ -127,7 +127,7 @@ namespace ZylLib.UnionTypes {
 		public byte B3;
 
 		/// <summary>
-		/// Construction UnionInt, argument is int type (构造 UnionInt, 参数是 int 类型).
+		/// Initializes a new instance of the UnionInt class using a int value (使用 int 值初始化 UnionInt 类的新实例).
 		/// </summary>
 		/// <param name="v">Value</param>
 		public UnionInt(int v) {
@@ -146,7 +146,7 @@ namespace ZylLib.UnionTypes {
 		}
 
 		/// <summary>
-		/// Construction UnionInt, argument is uint type (构造 UnionInt, 参数是 uint 类型).
+		/// Initializes a new instance of the UnionInt class using a uint value (使用 uint 值初始化 UnionInt 类的新实例).
 		/// </summary>
 		/// <param name="v">Value</param>
 		[CLSCompliant(false)]
@@ -166,7 +166,7 @@ namespace ZylLib.UnionTypes {
 		}
 
 		/// <summary>
-		/// Construction UnionInt, argument is float type (构造 UnionInt, 参数是 float 类型).
+		/// Initializes a new instance of the UnionInt class using a float value (使用 float 值初始化 UnionInt 类的新实例).
 		/// </summary>
 		/// <param name="v">Value</param>
 		public UnionInt(float v) {
@@ -217,7 +217,11 @@ namespace ZylLib.UnionTypes {
 		#endregion
 
 		#region Object Member
-		/// <inheritdoc />
+		/// <summary>
+		/// Determines whether the specified object is equal to the current object (确定指定的对象是否等于当前对象).
+		/// </summary>
+		/// <param name="obj">The object to compare with the current object.</param>
+		/// <returns>true if the specified object is equal to the current object; otherwise, false.</returns>
 		public override bool Equals(object obj) {
 			if (null == obj) return false;
 			if (!(obj is UnionInt)) return false;
@@ -225,12 +229,18 @@ namespace ZylLib.UnionTypes {
 			return (I0 == a.I0);
 		}
 
-		/// <inheritdoc />
+		/// <summary>
+		/// Returns the hash code for the current object (返回当前对象的哈希代码).
+		/// </summary>
+		/// <returns>A hash code for the current object.</returns>
 		public override int GetHashCode() {
 			return I0.GetHashCode();
 		}
 
-		/// <inheritdoc />
+		/// <summary>
+		/// Returns a string that represents the current object (返回表示当前对象的字符串).
+		/// </summary>
+		/// <returns>A string that represents the current object.</returns>
 		public override string ToString() {
 			return I0.ToString();
 		}
