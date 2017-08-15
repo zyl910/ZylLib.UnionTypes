@@ -39,6 +39,7 @@
     <NamingMethod>Guid</NamingMethod>
     <HelpTitle>ZylLib.UnionTypes</HelpTitle>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected, ProtectedInternalAsProtected</VisibleItems>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
