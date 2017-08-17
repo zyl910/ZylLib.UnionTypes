@@ -19,16 +19,16 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>..\..\..\Build\Debug\Examples\net40\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>..\..\..\Build\Release\Examples\net40\</OutputPath>
+    <DefineConstants>TRACE;NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -49,9 +49,9 @@
     <Compile Include="UnionShortTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ZylLib.UnionTypes\ZylLib.UnionTypes.portable40.csproj">
-      <Project>{3BE38909-AA28-4C71-8568-F652EA252D7E}</Project>
-      <Name>ZylLib.UnionTypes.portable40</Name>
+    <ProjectReference Include="..\..\ZylLib.UnionTypes\ZylLib.UnionTypes.net40.csproj">
+      <Project>{02A0BECE-3DF5-4BC0-AFCE-D50F0D746E64}</Project>
+      <Name>ZylLib.UnionTypes.net40</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

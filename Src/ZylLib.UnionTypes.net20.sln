@@ -7,7 +7,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExample.net20", "..\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{B4749CB6-8B2E-432B-828B-4C7F5C7F8B99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.Test.net20", "Test\ZylLib.UnionTypes.Test\ZylLib.UnionTypes.Test.net20.csproj", "{F5CCD35F-63D2-4A3D-A2DB-6C18727B15AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9F3EC4B-B48D-487A-A03E-F24D7EAAEA95}"
+	ProjectSection(SolutionItems) = preProject
+		localtestrun.testrunconfig = localtestrun.testrunconfig
+		ZylLib.UnionTypes.net20.vsmdi = ZylLib.UnionTypes.net20.vsmdi
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{D98BE664-45CD-4196-ACBF-91E4169F7945}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ZylLib.UnionTypes.net20.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -21,11 +34,16 @@ Global
 		{B7C17100-3414-44A3-8FEC-A84D780B25DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7C17100-3414-44A3-8FEC-A84D780B25DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7C17100-3414-44A3-8FEC-A84D780B25DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5CCD35F-63D2-4A3D-A2DB-6C18727B15AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5CCD35F-63D2-4A3D-A2DB-6C18727B15AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5CCD35F-63D2-4A3D-A2DB-6C18727B15AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5CCD35F-63D2-4A3D-A2DB-6C18727B15AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B7C17100-3414-44A3-8FEC-A84D780B25DA} = {B4749CB6-8B2E-432B-828B-4C7F5C7F8B99}
+		{F5CCD35F-63D2-4A3D-A2DB-6C18727B15AE} = {D98BE664-45CD-4196-ACBF-91E4169F7945}
 	EndGlobalSection
 EndGlobal

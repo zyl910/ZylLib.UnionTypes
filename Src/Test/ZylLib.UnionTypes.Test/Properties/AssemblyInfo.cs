@@ -1,35 +1,55 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Security;
 
-// 有关程序集的常规信息通过下列特性集
-// 控制。更改这些特性值可修改
-// 与程序集关联的信息。
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+#if (NET47)
+[assembly: AssemblyTitle("ZylLib.UnionTypes.Test for .NET 4.7")]
+#elif (NET46)
+[assembly: AssemblyTitle("ZylLib.UnionTypes.Test for .NET 4.6")]
+#elif (NET45)
+[assembly: AssemblyTitle("ZylLib.UnionTypes.Test for .NET 4.5")]
+#elif (NET40)
+[assembly: AssemblyTitle("ZylLib.UnionTypes.Test for .NET 4.0")]
+#elif (NET20)
+[assembly: AssemblyTitle("ZylLib.UnionTypes.Test for .NET 2.0")]
+#else
 [assembly: AssemblyTitle("ZylLib.UnionTypes.Test")]
-[assembly: AssemblyDescription("")]
+#endif
+[assembly: AssemblyDescription("ZylLib.UnionTypes 's unit test (ZylLib.UnionTypes的单元测试)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ZylLib.UnionTypes.Test")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("zyl910")]
+[assembly: AssemblyProduct("ZylLib.UnionTypes")]
+[assembly: AssemblyCopyright("Copyright (C) zyl910 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// 将 ComVisible 设置为 false 使此程序集中的类型
-// 对 COM 组件不可见。如果需要从 COM 访问此程序集中的某个类型，
-// 则将该类型的 ComVisible 特性设置为 true。
+
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM componenets.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+#if (PORTABLE)
+#else
 [assembly: ComVisible(false)]
 
-// 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
+// The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("cc8ed80c-4537-4203-afca-a0bd0e097ff7")]
+#endif
 
-// 程序集的版本信息由下面四个值组成:
+// Version information for an assembly consists of the following four values:
 //
-//      主版本
-//      次版本
-//      内部版本号
-//      修订号
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
 //
-// 可以指定所有这些值，也可以使用“内部版本号”和“修订号”的默认值，
-// 方法是按如下所示使用“*”:
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+//[assembly: AssemblyVersion("1.0.0.0")]
+//[assembly: AssemblyFileVersion("1.0.0.0")]
+// See AssemblyVer.cs
+

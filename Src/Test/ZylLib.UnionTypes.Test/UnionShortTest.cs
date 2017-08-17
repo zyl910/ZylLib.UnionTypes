@@ -2,17 +2,16 @@
 using ZylLib.UnionTypes;
 #if NUNIT
 using NUnit.Framework;
+using TestClassAttribute = NUnit.Framework.TestFixtureAttribute;
+using TestMethodAttribute = NUnit.Framework.TestAttribute;
 #elif XUNIT
 using Xunit;
-using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using TestClassAttribute = Xunit.FactAttribute;
+using TestMethodAttribute = Newtonsoft.Json.Tests.XUnitAssert;
 #elif NETFX_CORE
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
-using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestFixture = Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute;
 #endif
 
 namespace ZylLib.UnionTypes.Test
@@ -23,7 +22,7 @@ namespace ZylLib.UnionTypes.Test
     ///这是 UnionShortTest 的测试类，旨在
     ///包含所有 UnionShortTest 单元测试
     ///</summary>
-	[TestFixture()]
+	[TestClass()]
 	public class UnionShortTest {
 
 
