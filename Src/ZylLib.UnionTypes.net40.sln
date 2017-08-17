@@ -22,7 +22,21 @@ Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "ZylLib.UnionTypes.net40.doc
 		{02A0BECE-3DF5-4BC0-AFCE-D50F0D746E64} = {02A0BECE-3DF5-4BC0-AFCE-D50F0D746E64}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.Test", "Test\ZylLib.UnionTypes.Test\ZylLib.UnionTypes.Test.net40.csproj", "{449CE87D-8D51-4E61-8431-CBFD5DB23F87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4E473AD5-1F55-4C47-8E27-47407A93A88D}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		ZylLib.UnionTypes.net40.vsmdi = ZylLib.UnionTypes.net40.vsmdi
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{44E949F8-4F41-4E22-A799-E18616D306AF}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ZylLib.UnionTypes.net40.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -54,6 +68,10 @@ Global
 		{B9DD61EA-B837-43C7-B3E5-E2756A8CFF70}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1DE013DE-0235-46AF-BC1D-385325A84BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449CE87D-8D51-4E61-8431-CBFD5DB23F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449CE87D-8D51-4E61-8431-CBFD5DB23F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449CE87D-8D51-4E61-8431-CBFD5DB23F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449CE87D-8D51-4E61-8431-CBFD5DB23F87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,5 +81,6 @@ Global
 		{19023539-6AF3-4006-98FA-5CC8F2DD6CB6} = {B4749CB6-8B2E-432B-828B-4C7F5C7F8B99}
 		{B9DD61EA-B837-43C7-B3E5-E2756A8CFF70} = {B4749CB6-8B2E-432B-828B-4C7F5C7F8B99}
 		{1DE013DE-0235-46AF-BC1D-385325A84BE8} = {B831BFAB-A51E-45C1-917A-5AC02BED88FB}
+		{449CE87D-8D51-4E61-8431-CBFD5DB23F87} = {44E949F8-4F41-4E22-A799-E18616D306AF}
 	EndGlobalSection
 EndGlobal
