@@ -31,7 +31,7 @@ namespace ZylLib.UnionTypes {
 		/// <returns>The total number of bytes load (加载到的字节总数).</returns>
 		/// <exception cref="System.ArgumentNullException"><c>src</c> is null.</exception>
 		/// <exception cref="System.ArgumentException"><c>src</c> is not an array of primitives.</exception>
-		/// <exception cref="System.ArgumentOutOfRangeException"><c>offset</c>, srcOffset</c>, or <c>count</c> is less than 0.</exception>
+		/// <exception cref="System.ArgumentOutOfRangeException"><c>offset</c>, <c>srcOffset</c>, or <c>count</c> is less than 0.</exception>
 		int LoadBytesAt<T>(int offset, int srcOffset, int count, params T[] src) where T : struct;
 
 		/// <summary>
@@ -55,7 +55,7 @@ namespace ZylLib.UnionTypes {
 		/// <returns>The total number of bytes save (保存到的字节总数).</returns>
 		/// <exception cref="System.ArgumentNullException"><c>dst</c> is null.</exception>
 		/// <exception cref="System.ArgumentException"><c>dst</c> is not an array of primitives.</exception>
-		/// <exception cref="System.ArgumentOutOfRangeException"><c>offset</c>, dstOffset</c>, or <c>count</c> is less than 0.</exception>
+		/// <exception cref="System.ArgumentOutOfRangeException"><c>offset</c>, <c>dstOffset</c>, or <c>count</c> is less than 0.</exception>
 		int SaveBytesAt<T>(int offset, int dstOffset, int count, T[] dst) where T : struct;
 
 		/// <summary>
