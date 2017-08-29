@@ -107,6 +107,7 @@ Backup*/
 TestResults/
 UpgradeLog*.XML
 
+.vs
 *.pidb
 *.userprefs
 *.pfx
