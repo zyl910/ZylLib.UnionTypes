@@ -10,6 +10,11 @@ using System.Runtime.Serialization;
 #endif
 
 namespace ZylLib.UnionTypes {
+#if (NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6)
+	using XmlIgnoreAttribute = NotSupportedXmlIgnoreAttribute;
+#else
+#endif
+
 	/// <summary>
 	/// Short union type, size is 2 byte (短整数联合体, 大小为2字节). Like `short[1]` .
 	/// </summary>
@@ -20,11 +25,11 @@ namespace ZylLib.UnionTypes {
 	/// <revisionHistory>
 	///   <revision date="02/08/2017" version="1.0.0.0">Created.</revision>
 	/// </revisionHistory>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 	[Serializable]
 #endif
-#if (NET20)
+#if (NET20 || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6)
 #else
 	[DataContract]
 #endif
@@ -34,7 +39,7 @@ namespace ZylLib.UnionTypes {
 		public const int BytesSize = 2;
 
 		/// <summary>short(Int16) 0</summary>
-#if (NET20)
+#if (NET20 || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6)
 #else
 		[DataMember]
 #endif
@@ -42,21 +47,17 @@ namespace ZylLib.UnionTypes {
 		public short S0;
 
 		/// <summary>ushort(UInt16) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
 		[XmlIgnore]
-#if (NET20)	// No need, because DataContract know XmlIgnoreAttribute (不需要, 因为 DataContract 认识 XmlIgnoreAttribute).
-#else
-		[IgnoreDataMember]
-#endif
 		[CLSCompliant(false)]
 		[FieldOffset(0)]
 		public ushort US0;
 
 		/// <summary>byte(Byte) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -64,7 +65,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(0)]
 		public byte B0;
 		/// <summary>byte(Byte) 1</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif

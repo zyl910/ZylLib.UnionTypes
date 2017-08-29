@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "buildOptions": {
     "emitEntryPoint": true
@@ -13,7 +13,12 @@
 
   "frameworks": {
     "netcoreapp1.0": {
-      "imports": "dnxcore50"
+        "imports": "dnxcore50",
+        "dependencies": {
+            "ZylLib.UnionTypes.netstandard1.0": {
+                "target": "project"
+            }
+        }
     }
   }
 }

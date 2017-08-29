@@ -10,6 +10,11 @@ using System.Runtime.Serialization;
 #endif
 
 namespace ZylLib.UnionTypes {
+#if (NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6)
+	using XmlIgnoreAttribute = NotSupportedXmlIgnoreAttribute;
+#else
+#endif
+
 	/// <summary>
 	/// Long union type, size is 8 byte (长整数联合体, 大小为8字节). Like `short[4]`, `int[2]`, `long[1]`, `float[2]`, `double[1]` .
 	/// </summary>
@@ -20,11 +25,11 @@ namespace ZylLib.UnionTypes {
 	/// <revisionHistory>
 	///   <revision date="02/08/2017" version="1.0.0.0">Created.</revision>
 	/// </revisionHistory>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 	[Serializable]
 #endif
-#if (NET20)
+#if (NET20 || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6)
 #else
 	[DataContract]
 #endif
@@ -34,7 +39,7 @@ namespace ZylLib.UnionTypes {
 		public const int BytesSize = 8;
 
 		/// <summary>long(Int64) 0</summary>
-#if (NET20)
+#if (NET20 || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6)
 #else
 		[DataMember]
 #endif
@@ -42,7 +47,7 @@ namespace ZylLib.UnionTypes {
 		public long L0;
 
 		/// <summary>ulong(UInt64) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -52,7 +57,7 @@ namespace ZylLib.UnionTypes {
 		public ulong UL0;
 
 		/// <summary>double(Double) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -61,7 +66,7 @@ namespace ZylLib.UnionTypes {
 		public double D0;
 
 		/// <summary>int(Int32) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -69,7 +74,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(0)]
 		public int I0;
 		/// <summary>int(Int32) 1</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -79,7 +84,7 @@ namespace ZylLib.UnionTypes {
 
 		/// <summary>uint(UInt32) 0</summary>
 		[CLSCompliant(false)]
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -87,7 +92,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(0)]
 		public uint UI0;
 		/// <summary>uint(UInt32) 1</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -97,7 +102,7 @@ namespace ZylLib.UnionTypes {
 		public uint UI1;
 
 		/// <summary>float(Single) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -105,7 +110,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(0)]
 		public float F0;
 		/// <summary>float(Single) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -114,7 +119,7 @@ namespace ZylLib.UnionTypes {
 		public float F1;
 
 		/// <summary>short(Int16) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -122,7 +127,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(0)]
 		public short S0;
 		/// <summary>short(Int16) 1</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -130,7 +135,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(2)]
 		public short S1;
 		/// <summary>short(Int16) 2</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -138,7 +143,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(4)]
 		public short S2;
 		/// <summary>short(Int16) 3</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -147,7 +152,7 @@ namespace ZylLib.UnionTypes {
 		public short S3;
 
 		/// <summary>ushort(UInt16) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -156,7 +161,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(0)]
 		public ushort US0;
 		/// <summary>ushort(UInt16) 1</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -165,7 +170,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(2)]
 		public ushort US1;
 		/// <summary>ushort(UInt16) 2</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -174,7 +179,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(4)]
 		public ushort US2;
 		/// <summary>ushort(UInt16) 3</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -184,7 +189,7 @@ namespace ZylLib.UnionTypes {
 		public ushort US3;
 
 		/// <summary>byte(Byte) 0</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -192,7 +197,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(0)]
 		public byte B0;
 		/// <summary>byte(Byte) 1</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -200,7 +205,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(1)]
 		public byte B1;
 		/// <summary>byte(Byte) 2</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -208,7 +213,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(2)]
 		public byte B2;
 		/// <summary>byte(Byte) 3</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -216,7 +221,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(3)]
 		public byte B3;
 		/// <summary>byte(Byte) 4</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -224,7 +229,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(4)]
 		public byte B4;
 		/// <summary>byte(Byte) 5</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -232,7 +237,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(5)]
 		public byte B5;
 		/// <summary>byte(Byte) 6</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
@@ -240,7 +245,7 @@ namespace ZylLib.UnionTypes {
 		[FieldOffset(6)]
 		public byte B6;
 		/// <summary>byte(Byte) 7</summary>
-#if (PORTABLE || NETSTANDARD || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
+#if (PORTABLE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3 || NETSTANDARD1_4 || NETSTANDARD1_5 || NETSTANDARD1_6 || NETFX_CORE || SILVERLIGHT || XBOX || WindowsCE)
 #else
 		[NonSerialized]
 #endif
