@@ -78,50 +78,37 @@ namespace ZylLib.UnionTypes.Test
 		[TestMethod()]
 		public void EqualsTest() {
 			UnionShort target = new UnionShort();
-			target.S0 = 0x1234;
-			Assert.AreEqual(true, target.Equals(new UnionShort(0x1234)));
+			target.B0 = 0x01;
+			target.B1 = 0x23;
+			short expectedint = (BitConverter.IsLittleEndian) ? (short)0x2301 : (short)0x0123;
+			UnionShort expected = new UnionShort(expectedint);
 			Assert.AreEqual(false, target.Equals(null));
+			Assert.AreEqual(true, target.Equals(expected));
+			Assert.AreEqual(expected, target);
 		}
 
 		/// <summary>
 		///LoadBytes 的测试
 		///</summary>
-		public void LoadBytesTestHelper<T>()
-			where T : struct {
-			UnionShort target = new UnionShort(); // TODO: 初始化为适当的值
-			T[] src = null; // TODO: 初始化为适当的值
-			int expected = 0; // TODO: 初始化为适当的值
-			int actual;
-			actual = target.LoadBytes<T>(src);
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("验证此测试方法的正确性。");
-		}
-
 		[TestMethod()]
 		public void LoadBytesTest() {
-			Assert.Inconclusive("没有找到能够满足 T 的类型约束的相应类型参数。请以适当的类型参数来调用 LoadBytesTestHelper<T>()。");
+			UnionShort target = new UnionShort();
+			target.LoadBytes<byte>(0x01, 0x23);
+			short expectedint = (BitConverter.IsLittleEndian) ? (short)0x2301 : (short)0x0123;
+			UnionShort expected = new UnionShort(expectedint);
+			Assert.AreEqual(expected, target);
 		}
 
 		/// <summary>
 		///LoadBytesAt 的测试
 		///</summary>
-		public void LoadBytesAtTestHelper<T>()
-			where T : struct {
-			UnionShort target = new UnionShort(); // TODO: 初始化为适当的值
-			int offset = 0; // TODO: 初始化为适当的值
-			int srcOffset = 0; // TODO: 初始化为适当的值
-			int count = 0; // TODO: 初始化为适当的值
-			T[] src = null; // TODO: 初始化为适当的值
-			int expected = 0; // TODO: 初始化为适当的值
-			int actual;
-			actual = target.LoadBytesAt<T>(offset, srcOffset, count, src);
-			Assert.AreEqual(expected, actual);
-			Assert.Inconclusive("验证此测试方法的正确性。");
-		}
-
 		[TestMethod()]
 		public void LoadBytesAtTest() {
-			Assert.Inconclusive("没有找到能够满足 T 的类型约束的相应类型参数。请以适当的类型参数来调用 LoadBytesAtTestHelper<T>()。");
+			UnionShort target = new UnionShort();
+			target.LoadBytesAt<byte>(0, 1, 2, 0x01);
+			short expectedint = (BitConverter.IsLittleEndian) ? (short)0x0100 : (short)0x0001;
+			UnionShort expected = new UnionShort(expectedint);
+			Assert.AreEqual(expected, target);
 		}
 
 		/// <summary>
