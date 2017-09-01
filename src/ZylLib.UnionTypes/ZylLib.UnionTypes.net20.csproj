@@ -14,20 +14,20 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Build\Debug\net20\</OutputPath>
+    <OutputPath>..\..\build\Debug\net20\</OutputPath>
     <DefineConstants>TRACE;DEBUG;NET20</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\Build\Debug\net20\ZylLib.UnionTypes.xml</DocumentationFile>
+    <DocumentationFile>..\..\build\Debug\net20\ZylLib.UnionTypes.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Build\Release\net20\</OutputPath>
+    <OutputPath>..\..\build\Release\net20\</OutputPath>
     <DefineConstants>TRACE;NET20</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\Build\Release\net20\ZylLib.UnionTypes.xml</DocumentationFile>
+    <DocumentationFile>..\..\build\Release\net20\ZylLib.UnionTypes.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

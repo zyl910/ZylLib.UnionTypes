@@ -21,7 +21,7 @@
     <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisLogFile>..\..\Build\Debug\Examples\net40\ConsoleExample.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>..\..\build\Debug\Examples\net40\ConsoleExample.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
@@ -32,12 +32,12 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <OutputPath>..\..\Build\Release\Examples\net40\</OutputPath>
+    <OutputPath>..\..\build\Release\Examples\net40\</OutputPath>
     <DefineConstants>TRACE;NET40</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisLogFile>..\..\Build\Release\Examples\net40\ConsoleExample.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>..\..\build\Release\Examples\net40\ConsoleExample.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
@@ -57,7 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Src\AssemblyVer.cs">
+    <Compile Include="..\..\src\AssemblyVer.cs">
       <Link>AssemblyVer.cs</Link>
     </Compile>
     <Compile Include="..\UnionTypesExample.cs">
@@ -70,7 +70,7 @@
     <None Include="net40\app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\ZylLib.UnionTypes\ZylLib.UnionTypes.net40.csproj">
+    <ProjectReference Include="..\..\src\ZylLib.UnionTypes\ZylLib.UnionTypes.net40.csproj">
       <Project>{02A0BECE-3DF5-4BC0-AFCE-D50F0D746E64}</Project>
       <Name>ZylLib.UnionTypes.net40</Name>
     </ProjectReference>

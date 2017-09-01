@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Src\AssemblyVer.cs">
+    <Compile Include="..\..\src\AssemblyVer.cs">
       <Link>AssemblyVer.cs</Link>
     </Compile>
     <Compile Include="..\UnionTypesExample.cs">
@@ -59,7 +59,7 @@
     <None Include="net46\app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\ZylLib.UnionTypes\ZylLib.UnionTypes.netstandard1.0.csproj">
+    <ProjectReference Include="..\..\src\ZylLib.UnionTypes\ZylLib.UnionTypes.netstandard1.0.csproj">
       <Project>{54908666-910e-4c40-82a2-3b76bcb2f8b2}</Project>
       <Name>ZylLib.UnionTypes.netstandard1.0</Name>
     </ProjectReference>

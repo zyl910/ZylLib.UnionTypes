@@ -19,20 +19,20 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Build\Debug\portable40\</OutputPath>
+    <OutputPath>..\..\build\Debug\portable40\</OutputPath>
     <DefineConstants>TRACE;DEBUG;PORTABLE;NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\Build\Debug\portable40\ZylLib.UnionTypes.xml</DocumentationFile>
+    <DocumentationFile>..\..\build\Debug\portable40\ZylLib.UnionTypes.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Build\Release\portable40\</OutputPath>
+    <OutputPath>..\..\build\Release\portable40\</OutputPath>
     <DefineConstants>TRACE;PORTABLE;NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\Build\Release\portable40\ZylLib.UnionTypes.xml</DocumentationFile>
+    <DocumentationFile>..\..\build\Release\portable40\ZylLib.UnionTypes.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->

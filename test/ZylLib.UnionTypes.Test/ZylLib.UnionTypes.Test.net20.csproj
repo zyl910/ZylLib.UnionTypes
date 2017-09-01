@@ -16,13 +16,13 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Build\Debug\Examples\net20\</OutputPath>
+    <OutputPath>..\..\build\Debug\Examples\net20\</OutputPath>
     <DefineConstants>TRACE;DEBUG;NET20</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\Build\Release\Examples\net20\</OutputPath>
+    <OutputPath>..\..\build\Release\Examples\net20\</OutputPath>
     <DefineConstants>TRACE;NET20</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
@@ -34,14 +34,14 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\AssemblyVer.cs">
+    <Compile Include="..\..\src\AssemblyVer.cs">
       <Link>AssemblyVer.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnionShortTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ZylLib.UnionTypes\ZylLib.UnionTypes.net20.csproj">
+    <ProjectReference Include="..\..\src\ZylLib.UnionTypes\ZylLib.UnionTypes.net20.csproj">
       <Project>{5A124D32-5E79-44A9-B584-BC361A6E4702}</Project>
       <Name>ZylLib.UnionTypes.net20</Name>
     </ProjectReference>

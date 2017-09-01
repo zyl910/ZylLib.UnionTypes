@@ -41,7 +41,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Build\Debug\Examples\net40\sl40\</OutputPath>
+    <OutputPath>..\..\build\Debug\Examples\net40\sl40\</OutputPath>
     <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
     <NoStdLib>true</NoStdLib>
     <NoConfig>true</NoConfig>
@@ -51,7 +51,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Build\Release\Examples\net40\sl40\</OutputPath>
+    <OutputPath>..\..\build\Release\Examples\net40\sl40\</OutputPath>
     <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
     <NoStdLib>true</NoStdLib>
     <NoConfig>true</NoConfig>
@@ -70,7 +70,7 @@
     <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Src\AssemblyVer.cs">
+    <Compile Include="..\..\src\AssemblyVer.cs">
       <Link>AssemblyVer.cs</Link>
     </Compile>
     <Compile Include="..\UnionTypesExample.cs">
@@ -98,7 +98,7 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\ZylLib.UnionTypes\ZylLib.UnionTypes.portable40.csproj">
+    <ProjectReference Include="..\..\src\ZylLib.UnionTypes\ZylLib.UnionTypes.portable40.csproj">
       <Project>{3BE38909-AA28-4C71-8568-F652EA252D7E}</Project>
       <Name>ZylLib.UnionTypes.portable40</Name>
     </ProjectReference>

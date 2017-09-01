@@ -35,7 +35,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Build\Debug\Examples\net20\</OutputPath>
+    <OutputPath>..\..\build\Debug\Examples\net20\</OutputPath>
     <DefineConstants>TRACE;DEBUG;NET20</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -46,7 +46,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Build\Release\Examples\net20\</OutputPath>
+    <OutputPath>..\..\build\Release\Examples\net20\</OutputPath>
     <DefineConstants>TRACE;NET20</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -58,7 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Src\AssemblyVer.cs">
+    <Compile Include="..\..\src\AssemblyVer.cs">
       <Link>AssemblyVer.cs</Link>
     </Compile>
     <Compile Include="..\UnionTypesExample.cs">
@@ -68,7 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\ZylLib.UnionTypes\ZylLib.UnionTypes.net20.vs2010.csproj">
+    <ProjectReference Include="..\..\src\ZylLib.UnionTypes\ZylLib.UnionTypes.net20.vs2010.csproj">
       <Project>{5A124D32-5E79-44A9-B584-BC361A6E4702}</Project>
       <Name>ZylLib.UnionTypes.net20.vs2010</Name>
     </ProjectReference>

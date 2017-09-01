@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.net20", "ZylLib.UnionTypes\ZylLib.UnionTypes.net20.csproj", "{5A124D32-5E79-44A9-B584-BC361A6E4702}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.net20", "src\ZylLib.UnionTypes\ZylLib.UnionTypes.net20.csproj", "{5A124D32-5E79-44A9-B584-BC361A6E4702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExample.net20", "..\Examples\ConsoleExample\ConsoleExample.net20.csproj", "{B7C17100-3414-44A3-8FEC-A84D780B25DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExample.net20", "..\examples\ConsoleExample\ConsoleExample.net20.csproj", "{B7C17100-3414-44A3-8FEC-A84D780B25DA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{B4749CB6-8B2E-432B-828B-4C7F5C7F8B99}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{B4749CB6-8B2E-432B-828B-4C7F5C7F8B99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.Test.net20", "Test\ZylLib.UnionTypes.Test\ZylLib.UnionTypes.Test.net20.csproj", "{F5CCD35F-63D2-4A3D-A2DB-6C18727B15AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZylLib.UnionTypes.Test.net20", "test\ZylLib.UnionTypes.Test\ZylLib.UnionTypes.Test.net20.csproj", "{F5CCD35F-63D2-4A3D-A2DB-6C18727B15AE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9F3EC4B-B48D-487A-A03E-F24D7EAAEA95}"
 	ProjectSection(SolutionItems) = preProject
