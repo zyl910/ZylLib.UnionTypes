@@ -1,24 +1,33 @@
 {
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "emitEntryPoint": true
-  },
+	"version": "1.0.0-*",
+	"buildOptions": {
+		"emitEntryPoint": true,
+		"compile": {
+			"include": [
+				"../UnionTypesExample.cs",
+				"../../Src/AssemblyVer.cs"
+			]
+		},
+		"define": [ "NETCOREAPP1_0" ]
+	},
 
-  "dependencies": {
-    "Microsoft.NETCore.App": {
-      "type": "platform",
-      "version": "1.0.1"
-    }
-  },
+	"dependencies": {
+		"Microsoft.NETCore.App": {
+			"type": "platform",
+			"version": "1.0.1"
+		},
+		"System.Runtime.Serialization.Json": "4.0.0",
+		"System.Xml.XmlSerializer": "4.0.10"
+	},
 
-  "frameworks": {
-    "netcoreapp1.0": {
-        "imports": "dnxcore50",
-        "dependencies": {
-            "ZylLib.UnionTypes.netstandard1.0": {
-                "target": "project"
-            }
-        }
-    }
-  }
+	"frameworks": {
+		"netcoreapp1.0": {
+			"imports": "dnxcore50",
+			"dependencies": {
+				"ZylLib.UnionTypes.netstandard1.0": {
+					"target": "project"
+				}
+			}
+		}
+	}
 }

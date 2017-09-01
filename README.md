@@ -31,3 +31,18 @@ Target frameworks (目标框架):
 * `net40`: .NET Framework 4.0 Client Profile. Support VS2010(VS10.0)+ .
 * `portable40`: Portable Class Library Profile2 (可移植库配置2), portable-net40+win8+sl4+wp7 . Support VS2010(VS10.0)+ .
 * `netstandard1.0`: .NET Standard 1.0 . Support VS2015(VS14.0)+ .
+
+## Tip (提示)
+
+Xml Serialization (Xml序列化):
+
+* .NET Framework: 1.0+. (Built-in) System.Xml.dll .
+* Silverlight: 3+. System.Xml.Serialization.dll.
+* .NET Core: NuGet https://www.nuget.org/packages/System.Xml.XmlSerializer
+
+WCF's DataContract Json Serialization (WCF的数据契约Json序列化):
+
+* .NET Framework: 3.5+. System.Runtime.Serialization.dll .
+* Silverlight: 3+. System.ServiceModel.Web.dll.
+* .NET Core: NuGet https://www.nuget.org/packages/System.Runtime.Serialization.Json
+

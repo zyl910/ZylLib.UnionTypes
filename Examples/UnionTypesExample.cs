@@ -203,11 +203,16 @@ namespace ZylLib.UnionTypes {
 				DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(T));
 				ser.WriteObject(ms, obj);
 				byte[] json = ms.ToArray();
+				ms.Flush();
+#if (NETCOREAPP1_0 || NETCOREAPP1_1)
+				// Need .NET Core/STANDARD 2.0 +
+#else
 				ms.Close();
+#endif
 				rt = Encoding.UTF8.GetString(json, 0, json.Length);
 			}
 #endif
-			return rt;
+				return rt;
 		}
 
 		/// <summary>
@@ -223,10 +228,15 @@ namespace ZylLib.UnionTypes {
 			DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(T));
 			using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonString))) {
 				rt = (T)ser.ReadObject(ms);
+				ms.Flush();
+#if (NETCOREAPP1_0 || NETCOREAPP1_1)
+				// Need .NET Core/STANDARD 2.0 +
+#else
 				ms.Close();
+#endif
 			}
 #endif
-				return rt;
+			return rt;
 		}
 	}
 }

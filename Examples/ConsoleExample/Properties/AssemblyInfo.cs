@@ -7,7 +7,13 @@ using System.Security;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-#if (NET47)
+#if (NETCOREAPP2_0)
+[assembly: AssemblyTitle("ZylLib.UnionTypes.ConsoleExample for .NET Core 2.0")]
+#elif (NETCOREAPP1_0)
+[assembly: AssemblyTitle("ZylLib.UnionTypes.ConsoleExample for .NET Core 1.0")]
+#elif (NETCOREAPP)
+[assembly: AssemblyTitle("ZylLib.UnionTypes.ConsoleExample for .NET Core")]
+#elif (NET47)
 [assembly: AssemblyTitle("ZylLib.UnionTypes.ConsoleExample for .NET 4.7")]
 #elif (NET46)
 [assembly: AssemblyTitle("ZylLib.UnionTypes.ConsoleExample for .NET 4.6")]
