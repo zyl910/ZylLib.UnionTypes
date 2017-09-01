@@ -14,7 +14,7 @@
     <Name>ZylLib.UnionTypes.net40.doc</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.0</FrameworkVersion>
-    <OutputPath>..\..\Build\Release\Documentation\net40\</OutputPath>
+    <OutputPath>..\..\build\Release\document\net40\</OutputPath>
     <HtmlHelpName>ZylLib.UnionTypes.net40.doc</HtmlHelpName>
     <Language>en-US</Language>
     <TransformComponentArguments>

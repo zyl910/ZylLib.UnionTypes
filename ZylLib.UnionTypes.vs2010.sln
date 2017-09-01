@@ -28,14 +28,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		Local.testsettings = Local.testsettings
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-		ZylLib.UnionTypes.net40.vsmdi = ZylLib.UnionTypes.net40.vsmdi
+		ZylLib.UnionTypes.vs2010.vsmdi = ZylLib.UnionTypes.vs2010.vsmdi
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{44E949F8-4F41-4E22-A799-E18616D306AF}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = ZylLib.UnionTypes.net40.vsmdi
+		CategoryFile = ZylLib.UnionTypes.vs2010.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
