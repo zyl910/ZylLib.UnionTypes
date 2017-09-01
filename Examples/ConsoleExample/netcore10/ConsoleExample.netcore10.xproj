@@ -16,7 +16,7 @@
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\ZylLib.UnionTypes\ZylLib.UnionTypes.netstandard1.0.csproj" />
+    <ProjectReference Include="..\..\..\Src\ZylLib.UnionTypes\ZylLib.UnionTypes.netstandard1.0.csproj" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
