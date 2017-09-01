@@ -21,18 +21,20 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\build\Debug\netstandard1.0\</OutputPath>
     <DefineConstants>TRACE;DEBUG;NETSTANDARD;NETSTANDARD1_0</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\build\Debug\netstandard1.0\ZylLib.UnionTypes.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\build\Release\netstandard1.0\</OutputPath>
     <DefineConstants>TRACE;NETSTANDARD;NETSTANDARD1_0</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\build\Release\netstandard1.0\ZylLib.UnionTypes.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <None Include="project.json" />

@@ -3,9 +3,15 @@
 	"buildOptions": {
 		"emitEntryPoint": true,
 		"compile": {
-			"include": [
+			"includeFiles": [
 				"../UnionTypesExample.cs",
 				"../../Src/AssemblyVer.cs"
+			],
+			"exclude": [
+				"net40",
+				"net45",
+				"net46",
+				"net47"
 			]
 		},
 		"define": [ "NETCOREAPP1_0" ]
